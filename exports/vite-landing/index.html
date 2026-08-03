@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rudiment GTM Map — go-to-market systems for small field teams</title>
+<meta name="description" content="Rudiment builds a go-to-market map around your accounts, wired into your CRM, with a dedicated Slack channel and enrichment credits. Built for your business, not rented.">
+<link rel="icon" href="/assets/rudiment-mark.png">
+<meta property="og:title" content="Rudiment GTM Map">
+<meta property="og:description" content="Your whole service area, mapped the way you actually sell it.">
+<meta property="og:type" content="website">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; background:#0A0A0A; }
+  * { box-sizing:border-box; }
+  body { font-family:Manrope, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#2FE3A8; text-decoration:none; }
+  a:hover { color:#7FF0C9; }
+  @keyframes ring { 0% { r:34; opacity:.55 } 100% { r:250; opacity:0 } }
+  @keyframes blip { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+  @keyframes dash { to { stroke-dashoffset:-28 } }
+</style>
+</helmet>
+
+<div style="background:#0A0A0A; color:#F4F3F1; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <div style="position:sticky; top:0; z-index:50; background:rgba(10,10,10,.86); backdrop-filter:blur(14px); border-bottom:1px solid #1C1C1C;">
+    <div style="max-width:1180px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:32px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:22px; width:auto; display:block;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; border-left:1px solid #232323; padding-left:11px;">GTM Map</div>
+      </div>
+      <div style="flex:1; display:flex; gap:26px; font-size:14px; color:#8A857E;">
+        <a href="#system" style="color:#8A857E;" style-hover="color:#F4F3F1">What we build</a>
+        <a href="#build" style="color:#8A857E;" style-hover="color:#F4F3F1">How it works</a>
+        <a href="#pricing" style="color:#8A857E;" style-hover="color:#F4F3F1">Engagement</a>
+      </div>
+      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; background:#2FE3A8; color:#06231A; border-radius:8px; padding:9px 16px; font-size:14px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="max-width:1180px; margin:0 auto; padding:96px 32px 0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
+    <div style="display:flex; align-items:center; gap:9px; border:1px solid #232323; border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; color:#8A857E; text-transform:uppercase;">
+      <span style="width:6px; height:6px; border-radius:50%; background:#2FE3A8;"></span>Built for small field teams
+    </div>
+
+    <div style="font-family:Poppins,sans-serif; font-size:64px; font-weight:600; letter-spacing:-.045em; line-height:1.04; max-width:17ch; text-wrap:balance;">Your whole service area, mapped the way you actually sell it.</div>
+
+    <div style="font-size:18px; line-height:1.62; color:#A8A29A; max-width:58ch; text-wrap:pretty;">You have field reps and a spreadsheet, not a RevOps team. Rudiment builds the go-to-market system around your accounts, wires it into the CRM you already run, and stays in a Slack channel while your reps drive. Built for your business, not rented from someone else's.</div>
+
+    <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; padding-top:6px;">
+      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
+      <a href="#system" style="border:1px solid #2B2B2B; color:#F4F3F1; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:500;" style-hover="border-color:#4A4A4A">See what gets built</a>
+    </div>
+
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6F6A64; letter-spacing:.04em;">Build-out fee, then $500/mo. No seats, no tiers.</div>
+  </div>
+
+  <!-- GRAPHIC: radius bloom -->
+  <div style="max-width:1180px; margin:56px auto 0; padding:0 32px;">
+    <div style="position:relative; border:1px solid #1F1F1F; border-radius:16px; background:#0C0C0C; overflow:hidden; height:440px;">
+      <div style="position:absolute; inset:0; background-image:radial-gradient(#191919 1px, transparent 1px); background-size:26px 26px;"></div>
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 46% 62% at 50% 50%, rgba(47,227,168,.10), transparent 72%);"></div>
+
+      <svg viewBox="0 0 1000 440" preserveAspectRatio="xMidYMid slice" style="position:absolute; inset:0; width:100%; height:100%;">
+        <defs>
+          <radialGradient id="core" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="#2FE3A8" stop-opacity=".55"></stop>
+            <stop offset="100%" stop-color="#2FE3A8" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+
+        <circle cx="500" cy="220" r="90" fill="none" stroke="#1F3A31" stroke-width="1"></circle>
+        <circle cx="500" cy="220" r="150" fill="none" stroke="#1B2E28" stroke-width="1"></circle>
+        <circle cx="500" cy="220" r="212" fill="none" stroke="#182420" stroke-width="1" stroke-dasharray="3 7"></circle>
+        <circle cx="500" cy="220" r="34" fill="url(#core)"></circle>
+        <circle cx="500" cy="220" r="90" fill="none" stroke="#2FE3A8" stroke-width="1" opacity=".5" style="animation:ring 5.5s ease-out infinite;"></circle>
+        <circle cx="500" cy="220" r="90" fill="none" stroke="#2FE3A8" stroke-width="1" opacity=".5" style="animation:ring 5.5s ease-out 2.75s infinite;"></circle>
+
+        <path d="M500 220 L392 152 L316 196 L268 132" fill="none" stroke="#2FE3A8" stroke-width="1.4" stroke-dasharray="5 6" opacity=".65" style="animation:dash 2.4s linear infinite;"></path>
+        <path d="M500 220 L604 286 L692 258 L760 306" fill="none" stroke="#2FE3A8" stroke-width="1.4" stroke-dasharray="5 6" opacity=".65" style="animation:dash 2.4s linear infinite;"></path>
+
+        <sc-for list="{{ dots }}" as="d" hint-placeholder-count="26">
+          <circle cx="{{ d.x }}" cy="{{ d.y }}" r="{{ d.r }}" fill="{{ d.fill }}" opacity="{{ d.o }}"></circle>
+        </sc-for>
+
+        <circle cx="500" cy="220" r="7" fill="#2FE3A8"></circle>
+        <circle cx="500" cy="220" r="13" fill="none" stroke="#2FE3A8" stroke-width="1.5" opacity=".5"></circle>
+      </svg>
+
+      <div style="position:absolute; left:50%; top:calc(50% + 34px); transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; white-space:nowrap;">Where your reps are today</div>
+
+      <div style="position:absolute; left:8%; top:16%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">WITHIN 15 MIN</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">38 accounts</div>
+      </div>
+
+      <div style="position:absolute; right:8%; top:24%; border:1px solid #1D4536; background:rgba(19,42,34,.9); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2FE3A8; margin-bottom:5px;">NOT IN YOUR CRM</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">14 worth a stop</div>
+      </div>
+
+      <div style="position:absolute; left:14%; bottom:13%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">CANCELED, STILL CLOSE</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">9 to win back</div>
+      </div>
+
+      <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(transparent,#0A0A0A);"></div>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div style="border-top:1px solid #1C1C1C; border-bottom:1px solid #1C1C1C; background:#0C0C0C; margin-top:72px;">
+    <div style="max-width:1180px; margin:0 auto; padding:28px 32px; display:flex; flex-wrap:wrap; gap:44px; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#57534C; text-transform:uppercase;">
+      <div>Landscaping</div><div>Pest &amp; lawn</div><div>Facilities</div><div>Snow &amp; ice</div><div>Building products</div><div>Medical device</div><div>Industrial supply</div><div>Equipment dealers</div><div>Commercial insurance</div><div>Route-based service</div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:26px 32px 0; text-align:center; font-size:14.5px; color:#57534C;">Anywhere a rep covers ground — territory sales, field service, or a route.</div>
+
+  <!-- THE SITUATION -->
+  <div style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The situation</div>
+      <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">A few reps, a few thousand accounts, and no one to build the list.</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:22px; padding-top:6px;">
+      <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Big companies hire an ops person to figure out where the revenue is. You have reps in trucks, a CRM someone set up three years ago, and a spreadsheet of cancellations nobody has opened since spring.</div>
+      <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Rudiment does that job for you. We build the system — every account, every status and every prospect you haven't called, on one map wired into your CRM — and then keep it current so the next stop is obvious before the truck leaves the yard. It runs on your data, in your workflow, and it is yours to change.</div>
+    </div>
+  </div>
+
+  <!-- THE SYSTEM -->
+  <div id="system" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
+    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+      <div style="display:flex; flex-direction:column; gap:16px; max-width:52ch; margin-bottom:52px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">What gets built</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four surfaces, one map underneath.</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+        <sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="4">
+          <div style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:32px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#2E2E2E">
+            <div style="display:flex; align-items:center; gap:11px;">
+              <div style="width:30px; height:30px; border-radius:8px; background:#132A22; border:1px solid #1D4536; display:flex; align-items:center; justify-content:center; color:#2FE3A8; font-family:'JetBrains Mono',monospace; font-size:11.5px;">{{ s.n }}</div>
+              <div style="font-family:Poppins,sans-serif; font-size:20px; font-weight:600; letter-spacing:-.02em;">{{ s.title }}</div>
+            </div>
+            <div style="font-size:15px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">{{ s.body }}</div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:4px;">
+              <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="3">
+                <div style="border:1px solid #232323; border-radius:6px; padding:4px 9px; font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:#6F6A64; text-transform:uppercase;">{{ t }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENRICHMENT -->
+  <div style="border-top:1px solid #1C1C1C;">
+    <div style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">Included every month</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">Contact data comes with the engagement.</div>
+        <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Pull a company profile, find the facilities director, get a verified email and a direct dial. Your retainer includes an enrichment credit pool every month, starting at 5,000 — no separate data vendor to shop for, no per-seat license, no annual contract stacked on top of ours.</div>
+        <div style="display:flex; flex-direction:column; gap:11px; padding-top:4px;">
+          <sc-for list="{{ enrichPoints }}" as="p" hint-placeholder-count="3">
+            <div style="display:flex; gap:11px; align-items:flex-start;">
+              <span style="color:#2FE3A8; font-size:14px; line-height:1.6;">→</span>
+              <span style="font-size:15.5px; line-height:1.6; color:#A8A29A;">{{ p }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; overflow:hidden;">
+        <div style="padding:16px 18px; border-bottom:1px solid #1C1C1C; display:flex; align-items:center; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.12em; color:#6F6A64;">CREDITS THIS MONTH</div>
+          <div style="font-size:12.5px; color:#A8A29A; font-variant-numeric:tabular-nums;">4,180 <span style="color:#57534C;">/ 5,000</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="height:5px; background:#1C1C1C; border-radius:999px; overflow:hidden; margin-bottom:20px;">
+            <div style="width:83.6%; height:100%; background:#2FE3A8; border-radius:999px;"></div>
+          </div>
+          <sc-for list="{{ sampleContacts }}" as="c" hint-placeholder-count="3">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 0; border-top:1px solid #171717;">
+              <div style="min-width:0;">
+                <div style="font-size:13.5px; color:#F4F3F1;">{{ c.name }}</div>
+                <div style="font-size:12px; color:#6F6A64;">{{ c.title }}</div>
+              </div>
+              <div style="{{ c.style }}">{{ c.value }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW WE BUILD IT -->
+  <div id="build" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
+    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+      <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:56px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">How it works</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four to six weeks from first call to your team using it.</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #232323;">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <div style="padding:28px 26px 34px; border-right:1px solid #1C1C1C; display:flex; flex-direction:column; gap:12px; position:relative;">
+            <div style="position:absolute; top:-4px; left:0; width:7px; height:7px; border-radius:50%; background:#2FE3A8;"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#57534C;">{{ st.when }}</div>
+            <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em;">{{ st.title }}</div>
+            <div style="font-size:14.5px; line-height:1.62; color:#8F8A82; text-wrap:pretty;">{{ st.body }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div id="pricing" style="border-top:1px solid #1C1C1C;">
+    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+      <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:52px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The engagement</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">One build, then a retainer sized to your team.</div>
+        <div style="font-size:16px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">You are paying us to build something, not to rent something. Every engagement opens with a build-out fee, because the first thing we deliver is a system shaped around your business.</div>
+      </div>
+
+      <div style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:36px 40px; display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#2FE3A8; text-transform:uppercase;">Phase one · required · one-time</div>
+          <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">Build-out</div>
+          <div style="display:flex; align-items:baseline; gap:9px; margin-top:4px;">
+            <div style="font-family:Poppins,sans-serif; font-size:36px; font-weight:600; letter-spacing:-.04em;">Scoped</div>
+          </div>
+          <div style="font-size:14.5px; line-height:1.6; color:#8F8A82; text-wrap:pretty;">Every engagement starts here. Priced against your account volume and how many systems we have to talk to, quoted after the first call, before any work starts. The retainer only begins once the system is live.</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px 28px;">
+          <sc-for list="{{ buildIncludes }}" as="b" hint-placeholder-count="5">
+            <div style="display:flex; gap:11px; align-items:flex-start;">
+              <span style="color:#2FE3A8; font-size:13px; line-height:1.6;">✓</span>
+              <span style="font-size:14.5px; line-height:1.55; color:#A8A29A;">{{ b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:baseline; gap:12px; margin:44px 0 18px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">Phase two · monthly</div>
+        <div style="flex:1; height:1px; background:#1C1C1C;"></div>
+        <div style="font-size:13.5px; color:#6F6A64;">Priced by team size, not by seat · every tier syncs to your CRM</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
+        <sc-for list="{{ tiers }}" as="t" hint-placeholder-count="3">
+          <div style="{{ t.cardStyle }}">
+            <div style="{{ t.badgeStyle }}">{{ t.badge }}</div>
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">{{ t.size }}</div>
+              <div style="font-family:Poppins,sans-serif; font-size:21px; font-weight:600; letter-spacing:-.025em;">{{ t.name }}</div>
+              <div style="display:flex; align-items:baseline; gap:8px; margin-top:6px;">
+                <div style="{{ t.priceStyle }}">{{ t.price }}</div>
+                <div style="font-size:13.5px; color:#6F6A64;">{{ t.per }}</div>
+              </div>
+              <div style="{{ t.buildFeeStyle }}">+ one-time build-out fee</div>
+              <div style="{{ t.creditStyle }}">{{ t.credits }}</div>
+              <div style="font-size:14px; line-height:1.6; color:#8F8A82; text-wrap:pretty; margin-top:8px;">{{ t.note }}</div>
+            </div>
+            <div style="height:1px; background:#1C1C1C; margin:22px 0 20px;"></div>
+            <div style="display:flex; flex-direction:column; gap:11px; flex:1;">
+              <sc-for list="{{ t.features }}" as="ft" hint-placeholder-count="6">
+                <div style="display:flex; gap:10px; align-items:flex-start;">
+                  <span style="{{ ft.markStyle }}">{{ ft.mark }}</span>
+                  <span style="{{ ft.textStyle }}">{{ ft.t }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="{{ t.ctaStyle }}">{{ t.cta }}</a>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:16px; border:1px solid #1F1F1F; border-radius:14px; background:#0C0C0C; padding:26px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+        <div style="font-size:15px; color:#8F8A82; flex:1; min-width:280px; text-wrap:pretty;">Not sure it's a fit? The first call is a working session, not a demo. We'll look at your account list and tell you whether a map actually solves your problem.</div>
+        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#F4F3F1; color:#0A0A0A; border-radius:9px; padding:12px 22px; font-size:14.5px; font-weight:600; white-space:nowrap;" style-hover="background:#FFFFFF; color:#0A0A0A">Book the call</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
+    <div style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;">
+      <div style="font-family:Poppins,sans-serif; font-size:32px; font-weight:600; letter-spacing:-.035em; line-height:1.18; text-wrap:balance;">Questions we get on the first call.</div>
+      <div onClick="{{ onFaqClick }}" style="display:flex; flex-direction:column;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+          <div data-faq="{{ f.i }}" style="{{ f.rowStyle }}">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px;">
+              <div style="font-size:16.5px; font-weight:600; letter-spacing:-.01em; color:#F4F3F1;">{{ f.q }}</div>
+              <div style="{{ f.iconStyle }}">+</div>
+            </div>
+            <div style="{{ f.answerStyle }}">{{ f.a }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div style="border-top:1px solid #1C1C1C;">
+    <div style="max-width:1180px; margin:0 auto; padding:120px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:24px;">
+      <div style="font-family:Poppins,sans-serif; font-size:46px; font-weight:600; letter-spacing:-.04em; line-height:1.1; max-width:18ch; text-wrap:balance;">Bring your account list. We'll show you the map.</div>
+      <div style="font-size:17px; line-height:1.6; color:#8F8A82; max-width:48ch; text-wrap:pretty;">Forty-five minutes, your real data, no slides.</div>
+      <div style="display:flex; gap:12px; padding-top:8px;">
+        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:14px 26px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER WORK -->
+  <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
+    <div style="max-width:1180px; margin:0 auto; padding:80px 32px;">
+      <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
+        <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">The rest of what Rudiment does</div>
+        <div style="font-size:15px; color:#6F6A64;">The map is one piece of a go-to-market engine.</div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+          <a href="https://getrudiment.com" target="_blank" rel="noopener" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none;" style-hover="border-color:#2E2E2E">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+              <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em; color:#F4F3F1;">{{ s.name }}</div>
+              <div style="color:#2FE3A8; font-size:15px;">→</div>
+            </div>
+            <div style="font-size:14.5px; line-height:1.6; color:#8F8A82; text-wrap:pretty;">{{ s.body }}</div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid #1C1C1C; background:#080808;">
+    <div style="max-width:1180px; margin:0 auto; padding:36px 32px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center;">
+        <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:19px; width:auto; display:block; opacity:.42;">
+      </div>
+      <div style="flex:1; display:flex; gap:22px; font-size:13.5px; color:#57534C; flex-wrap:wrap;">
+        <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">GTM Engineering</a>
+        <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">RevOps</a>
+        <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">Outbound</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#3D3A35; letter-spacing:.06em;">GO-TO-MARKET FOR SMALL FIELD TEAMS</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2FE3A8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2FE3A8&quot;,&quot;#0FC0F0&quot;],&quot;section&quot;:&quot;Brand&quot;}}">
+const FAQS = [
+  { q: 'Is this just another SaaS subscription?', a: "No. You get a URL and your team logs in, yes \u2014 but you're not buying a seat in a product. We build the map around your accounts, your service areas and your definition of a good customer, and we keep building as the territory changes. Closer to hiring a firm than subscribing to a tool." },
+  { q: 'We only have a couple of salespeople. Is this overkill?', a: 'That is exactly who it is for. A three-rep team has the same routing and prioritization problem as a thirty-rep team and none of the back office to solve it. Smaller book, faster build, same retainer.' },
+  { q: 'What does the build-out fee cover?', a: 'Discovery, connecting whatever system your accounts live in, importing and cleaning the list, the service-area logic, the filters your reps actually use, and training. Quoted once, after we have looked at your data, and it does not move.' },
+  { q: 'Why price by team size instead of per seat?', a: 'Per-seat pricing punishes you for putting the map in front of more people, which is the whole point. Within a tier, add the office manager, the owner, the new hire \u2014 the number does not change. You only move up when the team genuinely grows past five or ten.' },
+  { q: 'What happens in the Slack channel?', a: 'A shared channel with the people who built your map. Filter requests, data questions, a rep who needs a route rebuilt before Tuesday morning. Same-day responses during business hours.' },
+  { q: 'Our accounts live in QuickBooks and a spreadsheet.', a: 'Common, and fine. We have pulled account lists out of service software, accounting systems, CRMs and plain CSVs. If you can export it, we can map it.' },
+  { q: 'Do we own what you build?', a: 'The data is yours and exports whenever you want it. The platform stays ours, which is what lets us keep improving it for you without a change order.' }
+];
+
+const DOTS = [
+  [402,138,0],[356,178,0],[318,142,1],[430,196,0],[372,232,0],[300,214,0],
+  [268,168,1],[336,266,0],[416,278,0],[452,110,0],[254,240,0],[210,190,0],
+  [598,164,0],[642,208,0],[576,252,0],[688,178,1],[620,296,0],[556,196,0],
+  [716,240,0],[664,132,0],[744,196,0],[590,336,0],[672,344,1],[520,318,0],
+  [478,340,0],[398,318,0],[788,148,0],[236,300,0],[810,262,0],[184,254,0]
+];
+
+class Component extends DCLogic {
+  state = { open: 0 };
+
+  constructor(...args) {
+    super(...args);
+    this._onFaqClick = (e) => {
+      const row = e.target.closest('[data-faq]');
+      if (!row) return;
+      const i = Number(row.dataset.faq);
+      this.setState(s => ({ open: s.open === i ? -1 : i }));
+    };
+  }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#2FE3A8';
+    return {
+      accent,
+      dots: DOTS.map(([x, y, hot]) => ({
+        x, y,
+        r: hot ? 4.5 : 3,
+        fill: hot ? accent : '#3A3A3A',
+        o: hot ? 1 : 0.85
+      })),
+      surfaces: [
+        { n: '01', title: 'Map', body: 'Every account you serve, plotted and filterable by status, service line or anything else you track. Cancellations, at-risk customers and open ground all readable in one look.', tags: ['Account sync', 'Filter groups', 'Route building'] },
+        { n: '02', title: 'Chat', body: 'Ask the map a question in plain language. Which canceled accounts sit near Tuesday\u2019s route, where revenue is slipping, who has not been visited since spring. Answers come back as lists your reps can drive.', tags: ['Claude / GPT', 'Map-aware', 'Export'] },
+        { n: '03', title: 'Prospect', body: 'Find properties that look like your best customers and are not on your list yet. Deduped against what you already serve, then dropped onto the map as leads.', tags: ['Lookalikes', 'Deduped', 'Push to map'] },
+        { n: '04', title: 'Enrich', body: 'Pick a company and get the profile plus the people. Verified emails, direct dials, the titles that actually sign. Credits are included in the retainer.', tags: ['5,000 credits/mo', 'Direct dials', 'Push to CRM'] }
+      ],
+      enrichPoints: [
+        'Company profile, headcount, revenue estimate and turf or square footage',
+        'Verified work emails and direct dials for the roles that sign',
+        'Unused credits do not roll over, but they also never surprise you with an overage'
+      ],
+      sampleContacts: [
+        { name: 'Dana Whitmore', title: 'Director of Facilities', value: 'd.whitmore@\u2026', style: { color: '#A8A29A', fontSize: '12.5px', fontVariantNumeric: 'tabular-nums' } },
+        { name: 'Marcus Field', title: 'Property Manager', value: '(801) 555\u20130187', style: { color: '#A8A29A', fontSize: '12.5px', fontVariantNumeric: 'tabular-nums' } },
+        { name: 'Priya Raman', title: 'VP Operations', value: 'Reveal \u00b7 2', style: { color: accent, fontSize: '12px', fontWeight: 600, border: '1px solid #1D4536', background: '#132A22', borderRadius: '7px', padding: '5px 10px', whiteSpace: 'nowrap' } }
+      ],
+      steps: [
+        { when: 'WEEK 1', title: 'Working session', body: 'We go through your account list, your service areas and how your reps decide where to drive. No slides.' },
+        { when: 'WEEK 2', title: 'Data and wiring', body: 'Accounts pulled from wherever they live, cleaned, deduped, and mapped to the language your team uses.' },
+        { when: 'WEEKS 3\u20134', title: 'Build and review', body: 'Filters, service areas and routes built to your definitions. You review it with real accounts on the screen.' },
+        { when: 'WEEK 5+', title: 'Live and supported', body: 'Team trained, Slack channel open, monthly credits flowing. We keep adjusting as the book changes.' }
+      ],
+      buildIncludes: [
+        'Working session with the owner and everyone who sells',
+        'Account import from your CRM, service software or spreadsheet',
+        'Service-area logic and filter groups built to your definitions',
+        'Route planning configured around how you actually dispatch',
+        'Training and rollout for the people who use it'
+      ],
+      tiers: [
+        {
+          badge: 'Start here', size: '1\u20135 users', name: 'Standard', price: '$500', per: '/mo',
+          credits: '5,000 credits / mo',
+          note: 'One field team, one service area. The build we deliver most often.',
+          featured: true,
+          features: [
+            { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: 'Dedicated Slack channel with the team that built it', ok: true },
+            { t: 'Same-day support during business hours', ok: true },
+            { t: '5,000 enrichment credits every month', ok: true },
+            { t: 'Ongoing changes \u2014 new filters, new areas, new people', ok: true },
+            { t: 'API access and custom endpoints', ok: false }
+          ]
+        },
+        {
+          badge: '', size: '5\u201310 users', name: 'Growth', price: '$1,000', per: '/mo',
+          credits: '20,000 credits / mo',
+          note: 'Multiple crews or regions, with territory splits between reps.',
+          featured: false,
+          features: [
+            { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: 'Dedicated Slack channel with the team that built it', ok: true },
+            { t: 'Same-day support during business hours', ok: true },
+            { t: '20,000 enrichment credits every month', ok: true },
+            { t: 'Per-rep territory splits and separate route books', ok: true },
+            { t: 'API access and custom endpoints', ok: true }
+          ]
+        },
+        {
+          badge: '', size: '10+ users', name: 'Multi-team', price: 'Get pricing', per: '',
+          credits: '40,000 credits / mo',
+          note: 'Several branches, custom integrations, or a rollout across markets.',
+          featured: false,
+          features: [
+            { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: 'Dedicated Slack channel with the team that built it', ok: true },
+            { t: 'Priority support with a named account lead', ok: true },
+            { t: '40,000 enrichment credits every month', ok: true },
+            { t: 'Custom integrations beyond your CRM', ok: true },
+            { t: 'API access and custom endpoints', ok: true }
+          ]
+        }
+      ].map(t => ({
+        ...t,
+        cardStyle: {
+          border: '1px solid ' + (t.featured ? '#1D4536' : '#1F1F1F'),
+          borderRadius: '14px',
+          background: t.featured ? 'linear-gradient(180deg,#0F1613,#0F0F0F 60%)' : '#0F0F0F',
+          padding: '32px', display: 'flex', flexDirection: 'column', gap: '4px', position: 'relative'
+        },
+        features: t.features.map(f => ({
+          t: f.t,
+          mark: f.ok ? '\u2713' : '\u2715',
+          markStyle: { color: f.ok ? (t.featured ? accent : '#4E5A55') : '#E5484D', fontSize: '13px', lineHeight: 1.6, flexShrink: 0 },
+          textStyle: { fontSize: '14px', lineHeight: 1.55, color: f.ok ? '#A8A29A' : '#6F6A64' }
+        })),
+        cta: t.price === 'Get pricing' ? 'Talk to us' : 'Book a working session',
+        ctaStyle: t.featured
+          ? { marginTop: '24px', background: accent, color: '#06231A', borderRadius: '9px', padding: '11px 0', textAlign: 'center', fontSize: '14px', fontWeight: 600, cursor: 'pointer', textDecoration: 'none', display: 'block' }
+          : { marginTop: '24px', border: '1px solid #2B2B2B', color: '#F4F3F1', borderRadius: '9px', padding: '11px 0', textAlign: 'center', fontSize: '14px', fontWeight: 500, cursor: 'pointer', textDecoration: 'none', display: 'block' },
+        badgeStyle: t.badge
+          ? { position: 'absolute', top: '-1px', right: '28px', background: accent, color: '#06231A', fontFamily: "'JetBrains Mono', monospace", fontSize: '10.5px', letterSpacing: '.1em', padding: '5px 11px', borderRadius: '0 0 6px 6px', textTransform: 'uppercase' }
+          : { display: 'none' },
+        priceStyle: {
+          fontFamily: 'Poppins, sans-serif',
+          fontSize: t.price.length > 6 ? '26px' : '36px',
+          fontWeight: 600, letterSpacing: '-.04em',
+          color: t.featured ? accent : '#F4F3F1'
+        },
+        buildFeeStyle: {
+          fontSize: '13px', color: t.featured ? accent : '#8F8A82', marginTop: '4px',
+          opacity: t.featured ? 1 : .9
+        },
+        creditStyle: {
+          display: 'inline-flex', alignItems: 'center', alignSelf: 'flex-start',
+          border: '1px solid ' + (t.featured ? '#1D4536' : '#232323'),
+          background: t.featured ? '#132A22' : '#141414',
+          color: t.featured ? accent : '#A8A29A',
+          borderRadius: '7px', padding: '5px 10px', marginTop: '10px',
+          fontFamily: "'JetBrains Mono', monospace", fontSize: '11px', letterSpacing: '.06em'
+        }
+      })),
+      services: [
+        { name: 'GTM Engineering', body: 'Systems, data and automation that make a small team sell like a big one.' },
+        { name: 'RevOps', body: 'CRM cleanup, pipeline hygiene and the reporting your board keeps asking for.' },
+        { name: 'Outbound', body: 'Sequences, deliverability and infrastructure that actually reaches the inbox.' }
+      ],
+      retainerIncludes: [
+        'Dedicated Slack channel with the team that built it',
+        'Same-day support during business hours',
+        'A monthly enrichment credit pool, sized to your tier',
+        'Ongoing changes \u2014 new filters, new areas, new people',
+        'Platform updates and new surfaces as we ship them'
+      ],
+      onFaqClick: this._onFaqClick,
+      faqs: FAQS.map((f, i) => {
+        const open = this.state.open === i;
+        return {
+          q: f.q, a: f.a, i,
+          rowStyle: { borderTop: '1px solid #1C1C1C', padding: '22px 0', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: open ? '12px' : '0' },
+          iconStyle: { color: open ? accent : '#57534C', fontSize: '18px', lineHeight: 1, flexShrink: 0, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .2s ease' },
+          answerStyle: {
+            fontSize: '15.5px', lineHeight: 1.68, color: '#8F8A82', maxWidth: '62ch', textWrap: 'pretty',
+            maxHeight: open ? '260px' : '0', opacity: open ? 1 : 0, overflow: 'hidden', transition: 'max-height .28s ease, opacity .2s ease'
+          }
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
