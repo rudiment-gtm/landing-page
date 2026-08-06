@@ -26,6 +26,48 @@
   @keyframes ring { 0% { r:34; opacity:.55 } 100% { r:250; opacity:0 } }
   @keyframes blip { 0%,100% { opacity:.35 } 50% { opacity:1 } }
   @keyframes dash { to { stroke-dashoffset:-28 } }
+
+  .dc-cta-short { display:none; }
+
+  @media (max-width: 860px) {
+    .dc-grid-2, .dc-grid-2b, .dc-grid-2c, .dc-grid-2d, .dc-grid-2e { grid-template-columns:1fr !important; gap:28px !important; }
+    .dc-grid-3, .dc-grid-4 { grid-template-columns:1fr !important; }
+    .dc-step-item { border-right:none !important; border-bottom:1px solid #1C1C1C !important; }
+    .dc-nav-links { display:none !important; }
+  }
+
+  @media (max-width: 600px) {
+    .dc-section { padding-left:18px !important; padding-right:18px !important; }
+    .dc-pad-104 { padding-top:56px !important; padding-bottom:56px !important; }
+    .dc-pad-96  { padding-top:52px !important; padding-bottom:52px !important; }
+    .dc-pad-120 { padding-top:64px !important; padding-bottom:64px !important; }
+    .dc-pad-80  { padding-top:48px !important; padding-bottom:48px !important; }
+    .dc-pad-36  { padding-top:22px !important; padding-bottom:22px !important; }
+
+    .dc-hero { padding:48px 18px 0 !important; }
+    .dc-hero-title { font-size:32px !important; max-width:16ch !important; }
+    .dc-hero-sub { font-size:15.5px !important; }
+    .dc-h1b { font-size:28px !important; }
+    .dc-h2  { font-size:25px !important; }
+    .dc-h3  { font-size:23px !important; }
+
+    .dc-bloom { height:300px !important; }
+    .dc-stat-card { padding:8px 10px !important; }
+    .dc-stat-value { font-size:15px !important; }
+
+    .dc-card, .dc-tier-card, .dc-card-lg { padding:22px !important; }
+
+    .dc-proof-row { gap:20px !important; padding:20px 18px !important; }
+    .dc-cta-banner { flex-direction:column !important; align-items:flex-start !important; padding:20px 18px !important; }
+
+    .dc-nav-row { padding:12px 16px !important; gap:12px !important; }
+    .dc-nav-cta { padding:8px 12px !important; font-size:13px !important; gap:6px !important; }
+    .dc-cta-short { display:inline !important; }
+    .dc-cta-full  { display:none !important; }
+
+    .dc-footer-row { flex-direction:column !important; align-items:center !important; gap:16px !important; text-align:center !important; }
+    .dc-footer-links { justify-content:center !important; flex:none !important; }
+  }
 </style>
 </helmet>
 
@@ -33,29 +75,29 @@
 
   <!-- NAV -->
   <div style="position:sticky; top:0; z-index:50; background:rgba(10,10,10,.86); backdrop-filter:blur(14px); border-bottom:1px solid #1C1C1C;">
-    <div style="max-width:1180px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:32px;">
+    <div class="dc-nav-row" style="max-width:1180px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:32px;">
       <div style="display:flex; align-items:center; gap:11px;">
         <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:22px; width:auto; display:block;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; border-left:1px solid #232323; padding-left:11px;">GTM Map</div>
       </div>
-      <div style="flex:1; display:flex; gap:26px; font-size:14px; color:#8A857E;">
+      <div class="dc-nav-links" style="flex:1; display:flex; gap:26px; font-size:14px; color:#8A857E;">
         <a href="#system" style="color:#8A857E;" style-hover="color:#F4F3F1">What we build</a>
         <a href="#build" style="color:#8A857E;" style-hover="color:#F4F3F1">How it works</a>
         <a href="#pricing" style="color:#8A857E;" style-hover="color:#F4F3F1">Engagement</a>
       </div>
-      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; background:#2FE3A8; color:#06231A; border-radius:8px; padding:9px 16px; font-size:14px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
+      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" class="dc-nav-cta" style="display:flex; align-items:center; gap:8px; background:#2FE3A8; color:#06231A; border-radius:8px; padding:9px 16px; font-size:14px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A"><span class="dc-cta-full">Book a working session</span><span class="dc-cta-short">Book a call</span></a>
     </div>
   </div>
 
   <!-- HERO -->
-  <div style="max-width:1180px; margin:0 auto; padding:96px 32px 0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
+  <div class="dc-hero" style="max-width:1180px; margin:0 auto; padding:96px 32px 0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
     <div style="display:flex; align-items:center; gap:9px; border:1px solid #232323; border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; color:#8A857E; text-transform:uppercase;">
       <span style="width:6px; height:6px; border-radius:50%; background:#2FE3A8;"></span>Built for small field teams
     </div>
 
-    <div style="font-family:Poppins,sans-serif; font-size:64px; font-weight:600; letter-spacing:-.045em; line-height:1.04; max-width:17ch; text-wrap:balance;">Your whole service area, mapped the way you actually sell it.</div>
+    <div class="dc-hero-title" style="font-family:Poppins,sans-serif; font-size:64px; font-weight:600; letter-spacing:-.045em; line-height:1.04; max-width:17ch; text-wrap:balance;">Your whole service area, mapped the way you actually sell it.</div>
 
-    <div style="font-size:18px; line-height:1.62; color:#A8A29A; max-width:58ch; text-wrap:pretty;">You have field reps and a spreadsheet, not a RevOps team. Rudiment builds the go-to-market system around your accounts, wires it into the CRM you already run, and stays in a Slack channel while your reps drive. Built for your business, not rented from someone else's.</div>
+    <div class="dc-hero-sub" style="font-size:18px; line-height:1.62; color:#A8A29A; max-width:58ch; text-wrap:pretty;">You have field reps and a spreadsheet, not a RevOps team. Rudiment builds the go-to-market system around your accounts, wires it into the CRM you already run, and stays in a Slack channel while your reps drive. Built for your business, not rented from someone else's.</div>
 
     <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; padding-top:6px;">
       <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
@@ -66,8 +108,8 @@
   </div>
 
   <!-- GRAPHIC: radius bloom -->
-  <div style="max-width:1180px; margin:56px auto 0; padding:0 32px;">
-    <div style="position:relative; border:1px solid #1F1F1F; border-radius:16px; background:#0C0C0C; overflow:hidden; height:440px;">
+  <div class="dc-section" style="max-width:1180px; margin:56px auto 0; padding:0 32px;">
+    <div class="dc-bloom" style="position:relative; border:1px solid #1F1F1F; border-radius:16px; background:#0C0C0C; overflow:hidden; height:440px;">
       <div style="position:absolute; inset:0; background-image:radial-gradient(#191919 1px, transparent 1px); background-size:26px 26px;"></div>
       <div style="position:absolute; inset:0; background:radial-gradient(ellipse 46% 62% at 50% 50%, rgba(47,227,168,.10), transparent 72%);"></div>
 
@@ -99,19 +141,19 @@
 
       <div style="position:absolute; left:50%; top:calc(50% + 34px); transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; white-space:nowrap;">Where your reps are today</div>
 
-      <div style="position:absolute; left:8%; top:16%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div class="dc-stat-card" style="position:absolute; left:8%; top:16%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">WITHIN 15 MIN</div>
-        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">38 accounts</div>
+        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">38 accounts</div>
       </div>
 
-      <div style="position:absolute; right:8%; top:24%; border:1px solid #1D4536; background:rgba(19,42,34,.9); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div class="dc-stat-card" style="position:absolute; right:8%; top:24%; border:1px solid #1D4536; background:rgba(19,42,34,.9); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2FE3A8; margin-bottom:5px;">NOT IN YOUR CRM</div>
-        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">14 worth a stop</div>
+        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">14 worth a stop</div>
       </div>
 
-      <div style="position:absolute; left:14%; bottom:13%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div class="dc-stat-card" style="position:absolute; left:14%; bottom:13%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">CANCELED, STILL CLOSE</div>
-        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">9 to win back</div>
+        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">9 to win back</div>
       </div>
 
       <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(transparent,#0A0A0A);"></div>
@@ -120,18 +162,18 @@
 
   <!-- PROOF STRIP -->
   <div style="border-top:1px solid #1C1C1C; border-bottom:1px solid #1C1C1C; background:#0C0C0C; margin-top:72px;">
-    <div style="max-width:1180px; margin:0 auto; padding:28px 32px; display:flex; flex-wrap:wrap; gap:44px; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#57534C; text-transform:uppercase;">
+    <div class="dc-section dc-proof-row" style="max-width:1180px; margin:0 auto; padding:28px 32px; display:flex; flex-wrap:wrap; gap:44px; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#57534C; text-transform:uppercase;">
       <div>Landscaping</div><div>Pest &amp; lawn</div><div>Facilities</div><div>Snow &amp; ice</div><div>Building products</div><div>Medical device</div><div>Industrial supply</div><div>Equipment dealers</div><div>Commercial insurance</div><div>Route-based service</div>
     </div>
   </div>
 
-  <div style="max-width:1180px; margin:0 auto; padding:26px 32px 0; text-align:center; font-size:14.5px; color:#57534C;">Anywhere a rep covers ground — territory sales, field service, or a route.</div>
+  <div class="dc-section" style="max-width:1180px; margin:0 auto; padding:26px 32px 0; text-align:center; font-size:14.5px; color:#57534C;">Anywhere a rep covers ground — territory sales, field service, or a route.</div>
 
   <!-- THE SITUATION -->
-  <div style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+  <div class="dc-section dc-pad-104 dc-grid-2" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
     <div style="display:flex; flex-direction:column; gap:20px;">
       <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The situation</div>
-      <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">A few reps, a few thousand accounts, and no one to build the list.</div>
+      <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">A few reps, a few thousand accounts, and no one to build the list.</div>
     </div>
     <div style="display:flex; flex-direction:column; gap:22px; padding-top:6px;">
       <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Big companies hire an ops person to figure out where the revenue is. You have reps in trucks, a CRM someone set up three years ago, and a spreadsheet of cancellations nobody has opened since spring.</div>
@@ -141,15 +183,15 @@
 
   <!-- THE SYSTEM -->
   <div id="system" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
       <div style="display:flex; flex-direction:column; gap:16px; max-width:52ch; margin-bottom:52px;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">What gets built</div>
-        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four surfaces, one map underneath.</div>
+        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four surfaces, one map underneath.</div>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+      <div class="dc-grid-2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
         <sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="4">
-          <div style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:32px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#2E2E2E">
+          <div class="dc-card" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:32px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#2E2E2E">
             <div style="display:flex; align-items:center; gap:11px;">
               <div style="width:30px; height:30px; border-radius:8px; background:#132A22; border:1px solid #1D4536; display:flex; align-items:center; justify-content:center; color:#2FE3A8; font-family:'JetBrains Mono',monospace; font-size:11.5px;">{{ s.n }}</div>
               <div style="font-family:Poppins,sans-serif; font-size:20px; font-weight:600; letter-spacing:-.02em;">{{ s.title }}</div>
@@ -168,10 +210,10 @@
 
   <!-- ENRICHMENT -->
   <div style="border-top:1px solid #1C1C1C;">
-    <div style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
+    <div class="dc-section dc-pad-104 dc-grid-2b" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
       <div style="display:flex; flex-direction:column; gap:22px;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">Included every month</div>
-        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">Contact data comes with the engagement.</div>
+        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">Contact data comes with the engagement.</div>
         <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Pull a company profile, find the facilities director, get a verified email and a direct dial. Your retainer includes an enrichment credit pool every month, starting at 5,000 — no separate data vendor to shop for, no per-seat license, no annual contract stacked on top of ours.</div>
         <div style="display:flex; flex-direction:column; gap:11px; padding-top:4px;">
           <sc-for list="{{ enrichPoints }}" as="p" hint-placeholder-count="3">
@@ -208,15 +250,15 @@
 
   <!-- HOW WE BUILD IT -->
   <div id="build" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
       <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:56px;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">How it works</div>
-        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four to six weeks from first call to your team using it.</div>
+        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four to six weeks from first call to your team using it.</div>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #232323;">
+      <div class="dc-grid-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #232323;">
         <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
-          <div style="padding:28px 26px 34px; border-right:1px solid #1C1C1C; display:flex; flex-direction:column; gap:12px; position:relative;">
+          <div class="dc-step-item" style="padding:28px 26px 34px; border-right:1px solid #1C1C1C; display:flex; flex-direction:column; gap:12px; position:relative;">
             <div style="position:absolute; top:-4px; left:0; width:7px; height:7px; border-radius:50%; background:#2FE3A8;"></div>
             <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#57534C;">{{ st.when }}</div>
             <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em;">{{ st.title }}</div>
@@ -229,14 +271,14 @@
 
   <!-- PRICING -->
   <div id="pricing" style="border-top:1px solid #1C1C1C;">
-    <div style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
       <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:52px;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The engagement</div>
-        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">One build, then a retainer sized to your team.</div>
+        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">One build, then a retainer sized to your team.</div>
         <div style="font-size:16px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">You are paying us to build something, not to rent something. Every engagement opens with a build-out fee, because the first thing we deliver is a system shaped around your business.</div>
       </div>
 
-      <div style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:36px 40px; display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:start;">
+      <div class="dc-card-lg dc-grid-2c" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:36px 40px; display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:start;">
         <div style="display:flex; flex-direction:column; gap:8px;">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#2FE3A8; text-transform:uppercase;">Phase one · required · one-time</div>
           <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">Build-out</div>
@@ -245,7 +287,7 @@
           </div>
           <div style="font-size:14.5px; line-height:1.6; color:#8F8A82; text-wrap:pretty;">Every engagement starts here. Priced against your account volume and how many systems we have to talk to, quoted after the first call, before any work starts. The retainer only begins once the system is live.</div>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px 28px;">
+        <div class="dc-grid-2d" style="display:grid; grid-template-columns:1fr 1fr; gap:12px 28px;">
           <sc-for list="{{ buildIncludes }}" as="b" hint-placeholder-count="5">
             <div style="display:flex; gap:11px; align-items:flex-start;">
               <span style="color:#2FE3A8; font-size:13px; line-height:1.6;">✓</span>
@@ -261,9 +303,9 @@
         <div style="font-size:13.5px; color:#6F6A64;">Priced by team size, not by seat · every tier syncs to your CRM</div>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
+      <div class="dc-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
         <sc-for list="{{ tiers }}" as="t" hint-placeholder-count="3">
-          <div style="{{ t.cardStyle }}">
+          <div class="dc-tier-card" style="{{ t.cardStyle }}">
             <div style="{{ t.badgeStyle }}">{{ t.badge }}</div>
             <div style="display:flex; flex-direction:column; gap:7px;">
               <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">{{ t.size }}</div>
@@ -290,7 +332,7 @@
         </sc-for>
       </div>
 
-      <div style="margin-top:16px; border:1px solid #1F1F1F; border-radius:14px; background:#0C0C0C; padding:26px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div class="dc-cta-banner" style="margin-top:16px; border:1px solid #1F1F1F; border-radius:14px; background:#0C0C0C; padding:26px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
         <div style="font-size:15px; color:#8F8A82; flex:1; min-width:280px; text-wrap:pretty;">Not sure it's a fit? The first call is a working session, not a demo. We'll look at your account list and tell you whether a map actually solves your problem.</div>
         <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#F4F3F1; color:#0A0A0A; border-radius:9px; padding:12px 22px; font-size:14.5px; font-weight:600; white-space:nowrap;" style-hover="background:#FFFFFF; color:#0A0A0A">Book the call</a>
       </div>
@@ -299,8 +341,8 @@
 
   <!-- FAQ -->
   <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;">
-      <div style="font-family:Poppins,sans-serif; font-size:32px; font-weight:600; letter-spacing:-.035em; line-height:1.18; text-wrap:balance;">Questions we get on the first call.</div>
+    <div class="dc-section dc-pad-96 dc-grid-2e" style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;">
+      <div class="dc-h3" style="font-family:Poppins,sans-serif; font-size:32px; font-weight:600; letter-spacing:-.035em; line-height:1.18; text-wrap:balance;">Questions we get on the first call.</div>
       <div onClick="{{ onFaqClick }}" style="display:flex; flex-direction:column;">
         <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
           <div data-faq="{{ f.i }}" style="{{ f.rowStyle }}">
@@ -317,8 +359,8 @@
 
   <!-- CLOSING -->
   <div style="border-top:1px solid #1C1C1C;">
-    <div style="max-width:1180px; margin:0 auto; padding:120px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:24px;">
-      <div style="font-family:Poppins,sans-serif; font-size:46px; font-weight:600; letter-spacing:-.04em; line-height:1.1; max-width:18ch; text-wrap:balance;">Bring your account list. We'll show you the map.</div>
+    <div class="dc-section dc-pad-120" style="max-width:1180px; margin:0 auto; padding:120px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:24px;">
+      <div class="dc-h1b" style="font-family:Poppins,sans-serif; font-size:46px; font-weight:600; letter-spacing:-.04em; line-height:1.1; max-width:18ch; text-wrap:balance;">Bring your account list. We'll show you the map.</div>
       <div style="font-size:17px; line-height:1.6; color:#8F8A82; max-width:48ch; text-wrap:pretty;">Forty-five minutes, your real data, no slides.</div>
       <div style="display:flex; gap:12px; padding-top:8px;">
         <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:14px 26px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
@@ -328,14 +370,14 @@
 
   <!-- OTHER WORK -->
   <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div style="max-width:1180px; margin:0 auto; padding:80px 32px;">
+    <div class="dc-section dc-pad-80" style="max-width:1180px; margin:0 auto; padding:80px 32px;">
       <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
         <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">The rest of what Rudiment does</div>
         <div style="font-size:15px; color:#6F6A64;">The map is one piece of a go-to-market engine.</div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+      <div class="dc-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
         <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-          <a href="https://getrudiment.com" target="_blank" rel="noopener" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none;" style-hover="border-color:#2E2E2E">
+          <a href="https://getrudiment.com" target="_blank" rel="noopener" class="dc-card" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none;" style-hover="border-color:#2E2E2E">
             <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
               <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em; color:#F4F3F1;">{{ s.name }}</div>
               <div style="color:#2FE3A8; font-size:15px;">→</div>
@@ -349,11 +391,11 @@
 
   <!-- FOOTER -->
   <div style="border-top:1px solid #1C1C1C; background:#080808;">
-    <div style="max-width:1180px; margin:0 auto; padding:36px 32px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+    <div class="dc-section dc-pad-36 dc-footer-row" style="max-width:1180px; margin:0 auto; padding:36px 32px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
       <div style="display:flex; align-items:center;">
         <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:19px; width:auto; display:block; opacity:.42;">
       </div>
-      <div style="flex:1; display:flex; gap:22px; font-size:13.5px; color:#57534C; flex-wrap:wrap;">
+      <div class="dc-footer-links" style="flex:1; display:flex; gap:22px; font-size:13.5px; color:#57534C; flex-wrap:wrap;">
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">GTM Engineering</a>
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">RevOps</a>
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">Outbound</a>
