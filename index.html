@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rudiment GTM Map — go-to-market systems for small field teams</title>
-<meta name="description" content="Rudiment builds a go-to-market map around your accounts, wired into your CRM, with a dedicated Slack channel and enrichment credits. Built for your business, not rented.">
-<link rel="icon" href="/assets/rudiment-mark.png">
-<meta property="og:title" content="Rudiment GTM Map">
+<title>Rudiment — the GTM map for field teams</title>
+<meta name="description" content="Keep. Win back. Go get. Your whole service area, mapped the way you actually sell it. Built for small field teams. From $149/mo.">
+<link rel="icon" href="/favicon.svg">
+<meta property="og:title" content="Keep. Win back. Go get.">
 <meta property="og:description" content="Your whole service area, mapped the way you actually sell it.">
 <meta property="og:type" content="website">
 <script src="/support.js"></script>
@@ -26,47 +26,17 @@
   @keyframes ring { 0% { r:34; opacity:.55 } 100% { r:250; opacity:0 } }
   @keyframes blip { 0%,100% { opacity:.35 } 50% { opacity:1 } }
   @keyframes dash { to { stroke-dashoffset:-28 } }
-
-  .dc-cta-short { display:none; }
-
-  @media (max-width: 860px) {
-    .dc-grid-2, .dc-grid-2b, .dc-grid-2c, .dc-grid-2d, .dc-grid-2e { grid-template-columns:1fr !important; gap:28px !important; }
-    .dc-grid-3, .dc-grid-4 { grid-template-columns:1fr !important; }
-    .dc-step-item { border-right:none !important; border-bottom:1px solid #1C1C1C !important; }
-    .dc-nav-links { display:none !important; }
+  @media (max-width: 900px) {
+    .r-2col, .r-feat { grid-template-columns:1fr !important; gap:34px !important; }
+    .r-2col { padding:64px 22px !important; }
+    .r-feat { padding:34px 26px !important; }
+    .r-shell { margin-right:0 !important; }
+    .r-tiers { grid-template-columns:1fr !important; grid-template-rows:auto !important; row-gap:14px !important; }
+    .r-card { display:flex !important; flex-direction:column !important; grid-template-rows:auto !important; grid-row:auto !important; }
+    .r-nav { display:none !important; }
   }
-
-  @media (max-width: 600px) {
-    .dc-section { padding-left:18px !important; padding-right:18px !important; }
-    .dc-pad-104 { padding-top:56px !important; padding-bottom:56px !important; }
-    .dc-pad-96  { padding-top:52px !important; padding-bottom:52px !important; }
-    .dc-pad-120 { padding-top:64px !important; padding-bottom:64px !important; }
-    .dc-pad-80  { padding-top:48px !important; padding-bottom:48px !important; }
-    .dc-pad-36  { padding-top:22px !important; padding-bottom:22px !important; }
-
-    .dc-hero { padding:48px 18px 0 !important; }
-    .dc-hero-title { font-size:32px !important; max-width:16ch !important; }
-    .dc-hero-sub { font-size:15.5px !important; }
-    .dc-h1b { font-size:28px !important; }
-    .dc-h2  { font-size:25px !important; }
-    .dc-h3  { font-size:23px !important; }
-
-    .dc-bloom { height:300px !important; }
-    .dc-stat-card { padding:8px 10px !important; }
-    .dc-stat-value { font-size:15px !important; }
-
-    .dc-card, .dc-tier-card, .dc-card-lg { padding:22px !important; }
-
-    .dc-proof-row { gap:20px !important; padding:20px 18px !important; }
-    .dc-cta-banner { flex-direction:column !important; align-items:flex-start !important; padding:20px 18px !important; }
-
-    .dc-nav-row { padding:12px 16px !important; gap:12px !important; }
-    .dc-nav-cta { padding:8px 12px !important; font-size:13px !important; gap:6px !important; }
-    .dc-cta-short { display:inline !important; }
-    .dc-cta-full  { display:none !important; }
-
-    .dc-footer-row { flex-direction:column !important; align-items:center !important; gap:16px !important; text-align:center !important; }
-    .dc-footer-links { justify-content:center !important; flex:none !important; }
+  @media (max-width: 640px) {
+    .r-sec { padding-left:22px !important; padding-right:22px !important; }
   }
 </style>
 </helmet>
@@ -75,41 +45,40 @@
 
   <!-- NAV -->
   <div style="position:sticky; top:0; z-index:50; background:rgba(10,10,10,.86); backdrop-filter:blur(14px); border-bottom:1px solid #1C1C1C;">
-    <div class="dc-nav-row" style="max-width:1180px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:32px;">
+    <div style="max-width:1180px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:32px;">
       <div style="display:flex; align-items:center; gap:11px;">
-        <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:22px; width:auto; display:block;">
+        <div style="display:flex; align-items:baseline; gap:1px; font-family:'JetBrains Mono',monospace; font-size:19px; line-height:1; letter-spacing:-.02em;"><span style="color:#2FE3A8; font-weight:400;">[</span><span style="color:#F4F3F1; font-weight:500;">rudiment</span><span style="color:#2FE3A8; font-weight:400;">]</span></div>
         <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; border-left:1px solid #232323; padding-left:11px;">GTM Map</div>
       </div>
-      <div class="dc-nav-links" style="flex:1; display:flex; gap:26px; font-size:14px; color:#8A857E;">
-        <a href="#system" style="color:#8A857E;" style-hover="color:#F4F3F1">What we build</a>
-        <a href="#build" style="color:#8A857E;" style-hover="color:#F4F3F1">How it works</a>
-        <a href="#pricing" style="color:#8A857E;" style-hover="color:#F4F3F1">Engagement</a>
+      <div class="r-nav" style="flex:1; display:flex; gap:26px; font-size:14px; color:#8A857E;">
+        <a href="#system" style="color:#8A857E;" style-hover="color:#F4F3F1">The product</a>
+        <a href="#pricing" style="color:#8A857E;" style-hover="color:#F4F3F1">Pricing</a>
       </div>
-      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" class="dc-nav-cta" style="display:flex; align-items:center; gap:8px; background:#2FE3A8; color:#06231A; border-radius:8px; padding:9px 16px; font-size:14px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A"><span class="dc-cta-full">Book a working session</span><span class="dc-cta-short">Book a call</span></a>
+      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; background:#2FE3A8; color:#06231A; border-radius:8px; padding:9px 16px; font-size:14px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a demo</a>
     </div>
   </div>
 
   <!-- HERO -->
-  <div class="dc-hero" style="max-width:1180px; margin:0 auto; padding:96px 32px 0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
+  <div class="r-sec" style="max-width:1180px; margin:0 auto; padding:96px 32px 0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
     <div style="display:flex; align-items:center; gap:9px; border:1px solid #232323; border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; color:#8A857E; text-transform:uppercase;">
       <span style="width:6px; height:6px; border-radius:50%; background:#2FE3A8;"></span>Built for small field teams
     </div>
 
-    <div class="dc-hero-title" style="font-family:Poppins,sans-serif; font-size:64px; font-weight:600; letter-spacing:-.045em; line-height:1.04; max-width:17ch; text-wrap:balance;">Your whole service area, mapped the way you actually sell it.</div>
+    <div style="font-family:Poppins,sans-serif; font-size:clamp(34px,6.6vw,64px); font-weight:600; letter-spacing:-.045em; line-height:1.06; max-width:17ch; text-wrap:balance;">Keep. Win back. Go get.</div>
 
-    <div class="dc-hero-sub" style="font-size:18px; line-height:1.62; color:#A8A29A; max-width:58ch; text-wrap:pretty;">You have field reps and a spreadsheet, not a RevOps team. Rudiment builds the go-to-market system around your accounts, wires it into the CRM you already run, and stays in a Slack channel while your reps drive. Built for your business, not rented from someone else's.</div>
+    <div style="font-size:18px; line-height:1.62; color:#A8A29A; max-width:58ch; text-wrap:pretty;">Your whole service area, mapped the way you actually sell it.</div>
 
     <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; padding-top:6px;">
-      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
-      <a href="#system" style="border:1px solid #2B2B2B; color:#F4F3F1; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:500;" style-hover="border-color:#4A4A4A">See what gets built</a>
+      <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a demo</a>
+      <a href="#system" style="border:1px solid #2B2B2B; color:#F4F3F1; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:500;" style-hover="border-color:#4A4A4A">See the product</a>
     </div>
 
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6F6A64; letter-spacing:.04em;">Build-out fee, then $500/mo. No seats, no tiers.</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6F6A64; letter-spacing:.04em;">From $149/mo. No seats, no per-user pricing.</div>
   </div>
 
   <!-- GRAPHIC: radius bloom -->
-  <div class="dc-section" style="max-width:1180px; margin:56px auto 0; padding:0 32px;">
-    <div class="dc-bloom" style="position:relative; border:1px solid #1F1F1F; border-radius:16px; background:#0C0C0C; overflow:hidden; height:440px;">
+  <div style="max-width:1180px; margin:56px auto 0; padding:0 32px;">
+    <div style="position:relative; border:1px solid #1F1F1F; border-radius:16px; background:#0C0C0C; overflow:hidden; height:440px;">
       <div style="position:absolute; inset:0; background-image:radial-gradient(#191919 1px, transparent 1px); background-size:26px 26px;"></div>
       <div style="position:absolute; inset:0; background:radial-gradient(ellipse 46% 62% at 50% 50%, rgba(47,227,168,.10), transparent 72%);"></div>
 
@@ -141,19 +110,19 @@
 
       <div style="position:absolute; left:50%; top:calc(50% + 34px); transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase; white-space:nowrap;">Where your reps are today</div>
 
-      <div class="dc-stat-card" style="position:absolute; left:8%; top:16%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div style="position:absolute; left:8%; top:16%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">WITHIN 15 MIN</div>
-        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">38 accounts</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">38 accounts</div>
       </div>
 
-      <div class="dc-stat-card" style="position:absolute; right:8%; top:24%; border:1px solid #1D4536; background:rgba(19,42,34,.9); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div style="position:absolute; right:8%; top:24%; border:1px solid #1D4536; background:rgba(19,42,34,.9); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2FE3A8; margin-bottom:5px;">NOT IN YOUR CRM</div>
-        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">14 worth a stop</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">14 worth a stop</div>
       </div>
 
-      <div class="dc-stat-card" style="position:absolute; left:14%; bottom:13%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
+      <div style="position:absolute; left:14%; bottom:13%; border:1px solid #1F1F1F; background:rgba(12,12,12,.92); border-radius:10px; padding:11px 14px; backdrop-filter:blur(6px);">
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#57534C; margin-bottom:5px;">CANCELED, STILL CLOSE</div>
-        <div class="dc-stat-value" style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">9 to win back</div>
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums;">9 to win back</div>
       </div>
 
       <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(transparent,#0A0A0A);"></div>
@@ -162,59 +131,182 @@
 
   <!-- PROOF STRIP -->
   <div style="border-top:1px solid #1C1C1C; border-bottom:1px solid #1C1C1C; background:#0C0C0C; margin-top:72px;">
-    <div class="dc-section dc-proof-row" style="max-width:1180px; margin:0 auto; padding:28px 32px; display:flex; flex-wrap:wrap; gap:44px; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#57534C; text-transform:uppercase;">
+    <div style="max-width:1180px; margin:0 auto; padding:28px 32px; display:flex; flex-wrap:wrap; gap:44px; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#57534C; text-transform:uppercase;">
       <div>Landscaping</div><div>Pest &amp; lawn</div><div>Facilities</div><div>Snow &amp; ice</div><div>Building products</div><div>Medical device</div><div>Industrial supply</div><div>Equipment dealers</div><div>Commercial insurance</div><div>Route-based service</div>
     </div>
   </div>
 
-  <div class="dc-section" style="max-width:1180px; margin:0 auto; padding:26px 32px 0; text-align:center; font-size:14.5px; color:#57534C;">Anywhere a rep covers ground — territory sales, field service, or a route.</div>
+  <div style="max-width:1180px; margin:0 auto; padding:26px 32px 0; text-align:center; font-size:14.5px; color:#57534C;">Anywhere a rep covers ground — territory sales, field service, or a route.</div>
 
   <!-- THE SITUATION -->
-  <div class="dc-section dc-pad-104 dc-grid-2" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+  <div class="r-2col" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
     <div style="display:flex; flex-direction:column; gap:20px;">
       <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The situation</div>
-      <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">A few reps, a few thousand accounts, and no one to build the list.</div>
+      <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">A few reps, a few thousand accounts, and no one to build the list.</div>
     </div>
     <div style="display:flex; flex-direction:column; gap:22px; padding-top:6px;">
       <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Big companies hire an ops person to figure out where the revenue is. You have reps in trucks, a CRM someone set up three years ago, and a spreadsheet of cancellations nobody has opened since spring.</div>
-      <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Rudiment does that job for you. We build the system — every account, every status and every prospect you haven't called, on one map wired into your CRM — and then keep it current so the next stop is obvious before the truck leaves the yard. It runs on your data, in your workflow, and it is yours to change.</div>
+      <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Rudiment does that job instead — every account, every status and every prospect you haven't called, on one map wired into your CRM — and then keep it current so the next stop is obvious before the truck leaves the yard. It runs on your data, in your workflow, and changes as fast as your book does.</div>
     </div>
   </div>
 
-  <!-- THE SYSTEM -->
+  <!-- THE PRODUCT -->
   <div id="system" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
-      <div style="display:flex; flex-direction:column; gap:16px; max-width:52ch; margin-bottom:52px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">What gets built</div>
-        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four surfaces, one map underneath.</div>
+    <div class="r-sec" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:flex; flex-direction:column; gap:20px;">
+      <div style="display:flex; flex-direction:column; gap:16px; max-width:52ch; margin-bottom:20px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The product</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Three surfaces, one map underneath.</div>
       </div>
 
-      <div class="dc-grid-2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
-        <sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="4">
-          <div class="dc-card" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:32px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#2E2E2E">
-            <div style="display:flex; align-items:center; gap:11px;">
-              <div style="width:30px; height:30px; border-radius:8px; background:#132A22; border:1px solid #1D4536; display:flex; align-items:center; justify-content:center; color:#2FE3A8; font-family:'JetBrains Mono',monospace; font-size:11.5px;">{{ s.n }}</div>
-              <div style="font-family:Poppins,sans-serif; font-size:20px; font-weight:600; letter-spacing:-.02em;">{{ s.title }}</div>
+      <!-- MAP -->
+      <div class="r-feat" style="border:1px solid #1F1F1F; border-radius:18px; background:#0C0C0C; overflow:hidden; display:grid; grid-template-columns:.92fr 1.08fr; gap:44px; align-items:center; padding:52px 0 52px 52px;">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div style="font-family:Poppins,sans-serif; font-size:clamp(26px,3.4vw,34px); font-weight:600; letter-spacing:-.035em; line-height:1.22; text-wrap:balance;">Every account, <span style="background:rgba(47,227,168,.14); color:#2FE3A8; border-radius:9px; padding:1px 12px 4px; display:inline-block;">by status</span></div>
+          <div style="font-size:16px; line-height:1.68; color:#8F8A82; text-wrap:pretty; max-width:44ch;">New, current, canceled and leads on one map. Filter by service, plan or last visit, then click any pin to see the account, its history and who to call.</div>
+        </div>
+        <div class="r-shell" style="border:1px solid #1F1F1F; border-radius:12px; background:#0A0A0A; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.6); margin-right:-1px;">
+          <div style="display:flex; height:372px;">
+            <div style="width:150px; background:#0B0B0D; border-right:1px solid #1A1A1A; padding:14px 12px; display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; gap:3px; background:#141518; border:1px solid #232427; border-radius:8px; padding:3px;">
+                <div style="flex:1; text-align:center; padding:5px 0; border-radius:6px; font-size:9.5px; color:#9DA0A6;">Chat</div>
+                <div style="flex:1; text-align:center; padding:5px 0; border-radius:6px; background:#F4F3F1; color:#0B0B0D; font-size:9.5px; font-weight:600;">Map</div>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <div style="flex:1; background:#141518; border:1px solid #232427; border-radius:7px; padding:7px 8px;">
+                  <div style="font-size:14px; font-weight:700; color:#F4F3F1;">2,773</div>
+                  <div style="font-size:8px; color:#6F6A64;">Accounts</div>
+                </div>
+                <div style="flex:1; background:#141518; border:1px solid #232427; border-radius:7px; padding:7px 8px;">
+                  <div style="font-size:14px; font-weight:700; color:#2FE3A8;">710</div>
+                  <div style="font-size:8px; color:#6F6A64;">Showing</div>
+                </div>
+              </div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.1em; color:#57534C;">FILTERS</div>
+              <div style="border:1px solid #1F1F1F; border-radius:8px; padding:8px; display:flex; flex-direction:column; gap:5px;">
+                <div style="background:#141518; border:1px solid #232427; border-radius:5px; padding:5px 7px; font-size:9px; color:#8F8A82;">Status</div>
+                <div style="background:#141518; border:1px solid #232427; border-radius:5px; padding:5px 7px; font-size:9px; color:#8F8A82;">is any of</div>
+                <div style="background:#132A22; border:1px solid #1D4536; border-radius:5px; padding:5px 7px; font-size:9px; color:#2FE3A8;">Canceled</div>
+              </div>
+              <div style="flex:1"></div>
+              <div style="display:flex; flex-direction:column; gap:5px;">
+                <div style="display:flex; align-items:center; gap:6px; font-size:9px; color:#8F8A82;"><span style="width:6px; height:6px; border-radius:50%; background:#2FE3A8;"></span>Current<span style="flex:1"></span><span style="color:#57534C;">1,204</span></div>
+                <div style="display:flex; align-items:center; gap:6px; font-size:9px; color:#8F8A82;"><span style="width:6px; height:6px; border-radius:50%; background:#5B8FD9;"></span>New<span style="flex:1"></span><span style="color:#57534C;">318</span></div>
+                <div style="display:flex; align-items:center; gap:6px; font-size:9px; color:#8F8A82;"><span style="width:6px; height:6px; border-radius:50%; background:#E5484D;"></span>Canceled<span style="flex:1"></span><span style="color:#57534C;">710</span></div>
+                <div style="display:flex; align-items:center; gap:6px; font-size:9px; color:#8F8A82;"><span style="width:6px; height:6px; border-radius:50%; background:#8A857E;"></span>Lead<span style="flex:1"></span><span style="color:#57534C;">541</span></div>
+              </div>
             </div>
-            <div style="font-size:15px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">{{ s.body }}</div>
-            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:4px;">
-              <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="3">
-                <div style="border:1px solid #232323; border-radius:6px; padding:4px 9px; font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:#6F6A64; text-transform:uppercase;">{{ t }}</div>
+            <div style="flex:1; position:relative; background:#0E1113;">
+              <div style="position:absolute; inset:0; background-image:linear-gradient(#15191B 1px, transparent 1px), linear-gradient(90deg,#15191B 1px, transparent 1px); background-size:34px 34px;"></div>
+              <sc-for list="{{ mapPins }}" as="m" hint-placeholder-count="22">
+                <div style="{{ m.style }}"></div>
               </sc-for>
+              <div style="position:absolute; right:12px; top:12px; bottom:12px; width:172px; background:#0B0B0D; border:1px solid #232427; border-radius:9px; padding:12px; display:flex; flex-direction:column; gap:9px;">
+                <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:8px;">
+                  <div style="font-size:11.5px; font-weight:600; color:#F4F3F1; line-height:1.3;">Wasatch Ridge HOA</div>
+                  <div style="color:#57534C; font-size:11px;">✕</div>
+                </div>
+                <div style="display:inline-flex; align-self:flex-start; background:rgba(229,72,77,.14); border:1px solid rgba(229,72,77,.34); color:#E5484D; border-radius:5px; padding:2px 7px; font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.08em;">CANCELED</div>
+                <div style="display:flex; flex-direction:column; gap:6px; font-family:'JetBrains Mono',monospace; font-size:9px;">
+                  <div style="display:flex; justify-content:space-between;"><span style="color:#6F6A64;">Orem, UT</span></div>
+                  <div style="display:flex; justify-content:space-between;"><span style="color:#6F6A64;">Last service</span><span style="color:#A8A29A;">Apr 12</span></div>
+                  <div style="display:flex; justify-content:space-between;"><span style="color:#6F6A64;">Annual value</span><span style="color:#A8A29A;">$4,800</span></div>
+                  <div style="display:flex; justify-content:space-between;"><span style="color:#6F6A64;">Turf</span><span style="color:#A8A29A;">6.2 ac</span></div>
+                </div>
+                <div style="height:1px; background:#1C1C1C;"></div>
+                <div style="font-size:9.5px; color:#A8A29A; line-height:1.4;">Dana Whitmore<br><span style="color:#57534C;">Facilities Director</span></div>
+                <div style="flex:1"></div>
+                <div style="background:#2FE3A8; color:#06231A; border-radius:6px; padding:6px 0; text-align:center; font-size:9.5px; font-weight:600;">Add to route</div>
+              </div>
             </div>
           </div>
-        </sc-for>
+        </div>
+      </div>
+
+      <!-- CHAT -->
+      <div class="r-feat" style="border:1px solid #1F1F1F; border-radius:18px; background:#0C0C0C; overflow:hidden; display:grid; grid-template-columns:.92fr 1.08fr; gap:44px; align-items:center; padding:52px 0 52px 52px;">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div style="font-family:Poppins,sans-serif; font-size:clamp(26px,3.4vw,34px); font-weight:600; letter-spacing:-.035em; line-height:1.22; text-wrap:balance;">Ask it <span style="background:rgba(47,227,168,.14); color:#2FE3A8; border-radius:9px; padding:1px 12px 4px; display:inline-block;">in plain language</span></div>
+          <div style="font-size:16px; line-height:1.68; color:#8F8A82; text-wrap:pretty; max-width:44ch;">Which canceled accounts sit near Tuesday's route. Where revenue is slipping. Who has not been visited since spring. Answers come back as a list you can drop straight onto the map.</div>
+        </div>
+        <div class="r-shell" style="border:1px solid #1F1F1F; border-radius:12px; background:#0A0A0A; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.6); margin-right:-1px;">
+          <div style="background:#0B0B0D; height:372px; display:flex; flex-direction:column;">
+            <div style="height:34px; border-bottom:1px solid #1A1A1A; display:flex; align-items:center; justify-content:space-between; padding:0 12px;">
+              <div style="font-size:10px; color:#A8A29A;">Canceled mowing in Utah County</div>
+              <div style="display:flex; align-items:center; gap:5px; background:#141518; border:1px solid #232427; border-radius:6px; padding:4px 8px; font-size:9px; color:#A8A29A;"><span style="width:5px; height:5px; border-radius:50%; background:#2FE3A8;"></span>Claude Sonnet 4.5</div>
+            </div>
+            <div style="flex:1; padding:16px 18px; display:flex; flex-direction:column; gap:14px; overflow:hidden;">
+              <div style="align-self:flex-end; max-width:74%; background:#1A1B1F; border:1px solid #232427; border-radius:9px 9px 3px 9px; padding:8px 11px; font-size:10.5px; color:#E8E7E4; line-height:1.45;">Which canceled mowing accounts are within 15 minutes of my Provo route?</div>
+              <div style="display:flex; gap:9px;">
+                <div style="width:19px; height:19px; border-radius:5px; background:#2FE3A8; flex-shrink:0;"></div>
+                <div style="display:flex; flex-direction:column; gap:9px; min-width:0;">
+                  <div style="font-size:10.5px; line-height:1.55; color:#A8A29A;">14 canceled mowing accounts fall inside a 15-minute drive. Nine canceled in the last 90 days.</div>
+                  <div style="border:1px solid #1F1F1F; background:#0F0F0F; border-radius:8px; overflow:hidden;">
+                    <div style="display:grid; grid-template-columns:1.5fr .9fr .8fr; background:#141518; border-bottom:1px solid #1F1F1F; padding:6px 10px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.08em; color:#57534C;"><div>ACCOUNT</div><div>CITY</div><div>VALUE</div></div>
+                    <div style="display:grid; grid-template-columns:1.5fr .9fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div>Wasatch Ridge HOA</div><div>Orem</div><div>$4,800</div></div>
+                    <div style="display:grid; grid-template-columns:1.5fr .9fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div>Cedar Hollow Apts</div><div>Provo</div><div>$3,150</div></div>
+                    <div style="display:grid; grid-template-columns:1.5fr .9fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A;"><div>Timp View Dental</div><div>Pleasant Grove</div><div>$1,240</div></div>
+                  </div>
+                  <div style="display:flex; gap:6px;">
+                    <div style="background:#2FE3A8; color:#06231A; border-radius:6px; padding:5px 9px; font-size:9px; font-weight:600;">Show on map</div>
+                    <div style="border:1px solid #232427; color:#A8A29A; border-radius:6px; padding:5px 9px; font-size:9px;">Build a route</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:0 18px 16px;">
+              <div style="background:#141518; border:1px solid #232427; border-radius:9px; padding:9px 11px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="font-size:10px; color:#57534C;">Ask about accounts, territories or routes…</div>
+                <div style="width:20px; height:20px; border-radius:5px; background:#2FE3A8; color:#06231A; display:flex; align-items:center; justify-content:center; font-size:10px;">↑</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROSPECT -->
+      <div class="r-feat" style="border:1px solid #1F1F1F; border-radius:18px; background:#0C0C0C; overflow:hidden; display:grid; grid-template-columns:.92fr 1.08fr; gap:44px; align-items:center; padding:52px 0 52px 52px;">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div style="font-family:Poppins,sans-serif; font-size:clamp(26px,3.4vw,34px); font-weight:600; letter-spacing:-.035em; line-height:1.22; text-wrap:balance;">Find the ones <span style="background:rgba(47,227,168,.14); color:#2FE3A8; border-radius:9px; padding:1px 12px 4px; display:inline-block;">you are missing</span></div>
+          <div style="font-size:16px; line-height:1.68; color:#8F8A82; text-wrap:pretty; max-width:44ch;">Search your service area for properties that look like your best customers and are not on your list yet. Deduped against what you already serve, then dropped onto the map as leads.</div>
+        </div>
+        <div class="r-shell" style="border:1px solid #1F1F1F; border-radius:12px; background:#0A0A0A; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.6); margin-right:-1px;">
+          <div style="background:#0B0B0D; height:372px; display:flex; flex-direction:column;">
+            <div style="height:34px; border-bottom:1px solid #1A1A1A; display:flex; align-items:center; justify-content:space-between; padding:0 12px;">
+              <div style="font-size:10px; color:#A8A29A;">Prospect</div>
+              <div style="background:#2FE3A8; color:#06231A; border-radius:6px; padding:4px 9px; font-size:9px; font-weight:600;">Add 12 to map</div>
+            </div>
+            <div style="padding:14px 16px; display:flex; flex-direction:column; gap:11px;">
+              <div style="background:#141518; border:1px solid #232427; border-radius:8px; padding:10px 12px; display:flex; flex-direction:column; gap:9px;">
+                <div style="font-size:10px; color:#8F8A82; line-height:1.45;">Commercial properties with 2+ acres of turf within 20 mi of Lehi, not already in CRM</div>
+                <div style="display:flex; gap:5px;">
+                  <div style="border:1px solid #232427; color:#6F6A64; border-radius:5px; padding:3px 7px; font-size:8.5px;">20 mi</div>
+                  <div style="border:1px solid #232427; color:#6F6A64; border-radius:5px; padding:3px 7px; font-size:8.5px;">HOA, Commercial</div>
+                  <div style="border:1px solid #232427; color:#6F6A64; border-radius:5px; padding:3px 7px; font-size:8.5px;">Exclude existing</div>
+                </div>
+              </div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.1em; color:#57534C;">86 RESULTS · 12 SELECTED</div>
+              <div style="border:1px solid #1F1F1F; background:#0F0F0F; border-radius:8px; overflow:hidden;">
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; background:#141518; border-bottom:1px solid #1F1F1F; padding:6px 10px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.08em; color:#57534C;"><div></div><div>PROPERTY</div><div>CITY</div><div>TURF</div></div>
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div style="color:#2FE3A8;">✓</div><div>Silver Lake Business Park</div><div>Lehi</div><div>6.2 ac</div></div>
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div style="color:#2FE3A8;">✓</div><div>Traverse Ridge HOA</div><div>Draper</div><div>4.8 ac</div></div>
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div style="color:#3D3A35;">○</div><div>Thanksgiving Point Offices</div><div>Lehi</div><div>3.9 ac</div></div>
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A; border-bottom:1px solid #171717;"><div style="color:#2FE3A8;">✓</div><div>Meadow Crossing Apartments</div><div>American Fork</div><div>3.1 ac</div></div>
+                <div style="display:grid; grid-template-columns:18px 1.8fr 1fr .8fr; padding:7px 10px; font-size:9.5px; color:#A8A29A;"><div style="color:#3D3A35;">○</div><div>Pointe West Medical</div><div>Saratoga Springs</div><div>2.4 ac</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ENRICHMENT -->
   <div style="border-top:1px solid #1C1C1C;">
-    <div class="dc-section dc-pad-104 dc-grid-2b" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
+    <div class="r-2col" style="max-width:1180px; margin:0 auto; padding:104px 32px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
       <div style="display:flex; flex-direction:column; gap:22px;">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">Included every month</div>
-        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">Contact data comes with the engagement.</div>
-        <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Pull a company profile, find the facilities director, get a verified email and a direct dial. Your retainer includes an enrichment credit pool every month, starting at 5,000 — no separate data vendor to shop for, no per-seat license, no annual contract stacked on top of ours.</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15; text-wrap:balance;">Contact data comes with the plan.</div>
+        <div style="font-size:16.5px; line-height:1.68; color:#A8A29A; text-wrap:pretty;">Pull a company profile, find the facilities director, get a verified email and a direct dial. Every plan includes an enrichment credit pool every month, starting at 1,000 — no separate data vendor to shop for, no per-seat license, no annual contract stacked on top of ours.</div>
         <div style="display:flex; flex-direction:column; gap:11px; padding-top:4px;">
           <sc-for list="{{ enrichPoints }}" as="p" hint-placeholder-count="3">
             <div style="display:flex; gap:11px; align-items:flex-start;">
@@ -248,78 +340,29 @@
     </div>
   </div>
 
-  <!-- HOW WE BUILD IT -->
-  <div id="build" style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
-      <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:56px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">How it works</div>
-        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Four to six weeks from first call to your team using it.</div>
-      </div>
-
-      <div class="dc-grid-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid #232323;">
-        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
-          <div class="dc-step-item" style="padding:28px 26px 34px; border-right:1px solid #1C1C1C; display:flex; flex-direction:column; gap:12px; position:relative;">
-            <div style="position:absolute; top:-4px; left:0; width:7px; height:7px; border-radius:50%; background:#2FE3A8;"></div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#57534C;">{{ st.when }}</div>
-            <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em;">{{ st.title }}</div>
-            <div style="font-size:14.5px; line-height:1.62; color:#8F8A82; text-wrap:pretty;">{{ st.body }}</div>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </div>
-
   <!-- PRICING -->
   <div id="pricing" style="border-top:1px solid #1C1C1C;">
-    <div class="dc-section dc-pad-104" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+    <div class="r-sec" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
       <div style="display:flex; flex-direction:column; gap:16px; max-width:50ch; margin-bottom:52px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">The engagement</div>
-        <div class="dc-h2" style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">One build, then a retainer sized to your team.</div>
-        <div style="font-size:16px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">You are paying us to build something, not to rent something. Every engagement opens with a build-out fee, because the first thing we deliver is a system shaped around your business.</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.14em; color:#2FE3A8; text-transform:uppercase;">Pricing</div>
+        <div style="font-family:Poppins,sans-serif; font-size:38px; font-weight:600; letter-spacing:-.035em; line-height:1.15;">Pricing that scales with usage, not headcount.</div>
+        <div style="font-size:16px; line-height:1.65; color:#8F8A82; text-wrap:pretty;">Every plan includes two-way CRM sync, a dedicated Slack channel and a monthly pool of enrichment credits. Add the office manager, the owner, the new hire — the price does not move.</div>
       </div>
 
-      <div class="dc-card-lg dc-grid-2c" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:36px 40px; display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:start;">
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#2FE3A8; text-transform:uppercase;">Phase one · required · one-time</div>
-          <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">Build-out</div>
-          <div style="display:flex; align-items:baseline; gap:9px; margin-top:4px;">
-            <div style="font-family:Poppins,sans-serif; font-size:36px; font-weight:600; letter-spacing:-.04em;">Scoped</div>
-          </div>
-          <div style="font-size:14.5px; line-height:1.6; color:#8F8A82; text-wrap:pretty;">Every engagement starts here. Priced against your account volume and how many systems we have to talk to, quoted after the first call, before any work starts. The retainer only begins once the system is live.</div>
-        </div>
-        <div class="dc-grid-2d" style="display:grid; grid-template-columns:1fr 1fr; gap:12px 28px;">
-          <sc-for list="{{ buildIncludes }}" as="b" hint-placeholder-count="5">
-            <div style="display:flex; gap:11px; align-items:flex-start;">
-              <span style="color:#2FE3A8; font-size:13px; line-height:1.6;">✓</span>
-              <span style="font-size:14.5px; line-height:1.55; color:#A8A29A;">{{ b }}</span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-
-      <div style="display:flex; align-items:baseline; gap:12px; margin:44px 0 18px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">Phase two · monthly</div>
-        <div style="flex:1; height:1px; background:#1C1C1C;"></div>
-        <div style="font-size:13.5px; color:#6F6A64;">Priced by team size, not by seat · every tier syncs to your CRM</div>
-      </div>
-
-      <div class="dc-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
-        <sc-for list="{{ tiers }}" as="t" hint-placeholder-count="3">
-          <div class="dc-tier-card" style="{{ t.cardStyle }}">
+      <div class="r-tiers" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:repeat(8,auto); column-gap:14px; row-gap:0;">
+        <sc-for list="{{ tiers }}" as="t" hint-placeholder-count="4">
+          <div class="r-card" style="{{ t.cardStyle }}">
             <div style="{{ t.badgeStyle }}">{{ t.badge }}</div>
-            <div style="display:flex; flex-direction:column; gap:7px;">
-              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">{{ t.size }}</div>
-              <div style="font-family:Poppins,sans-serif; font-size:21px; font-weight:600; letter-spacing:-.025em;">{{ t.name }}</div>
-              <div style="display:flex; align-items:baseline; gap:8px; margin-top:6px;">
-                <div style="{{ t.priceStyle }}">{{ t.price }}</div>
-                <div style="font-size:13.5px; color:#6F6A64;">{{ t.per }}</div>
-              </div>
-              <div style="{{ t.buildFeeStyle }}">+ one-time build-out fee</div>
-              <div style="{{ t.creditStyle }}">{{ t.credits }}</div>
-              <div style="font-size:14px; line-height:1.6; color:#8F8A82; text-wrap:pretty; margin-top:8px;">{{ t.note }}</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6A64; text-transform:uppercase;">{{ t.size }}</div>
+            <div style="font-family:Poppins,sans-serif; font-size:21px; font-weight:600; letter-spacing:-.025em; margin-top:7px;">{{ t.name }}</div>
+            <div style="display:flex; align-items:baseline; gap:8px; margin-top:6px;">
+              <div style="{{ t.priceStyle }}">{{ t.price }}</div>
+              <div style="font-size:13.5px; color:#6F6A64;">{{ t.per }}</div>
             </div>
+            <div style="{{ t.creditStyle }}">{{ t.credits }}</div>
+            <div style="font-size:14px; line-height:1.6; color:#8F8A82; text-wrap:pretty; margin-top:10px;">{{ t.note }}</div>
             <div style="height:1px; background:#1C1C1C; margin:22px 0 20px;"></div>
-            <div style="display:flex; flex-direction:column; gap:11px; flex:1;">
+            <div style="display:flex; flex-direction:column; gap:11px;">
               <sc-for list="{{ t.features }}" as="ft" hint-placeholder-count="6">
                 <div style="display:flex; gap:10px; align-items:flex-start;">
                   <span style="{{ ft.markStyle }}">{{ ft.mark }}</span>
@@ -332,17 +375,17 @@
         </sc-for>
       </div>
 
-      <div class="dc-cta-banner" style="margin-top:16px; border:1px solid #1F1F1F; border-radius:14px; background:#0C0C0C; padding:26px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-        <div style="font-size:15px; color:#8F8A82; flex:1; min-width:280px; text-wrap:pretty;">Not sure it's a fit? The first call is a working session, not a demo. We'll look at your account list and tell you whether a map actually solves your problem.</div>
-        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#F4F3F1; color:#0A0A0A; border-radius:9px; padding:12px 22px; font-size:14.5px; font-weight:600; white-space:nowrap;" style-hover="background:#FFFFFF; color:#0A0A0A">Book the call</a>
+      <div style="margin-top:16px; border:1px solid #1F1F1F; border-radius:14px; background:#0C0C0C; padding:26px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+        <div style="font-size:15px; color:#8F8A82; flex:1; min-width:280px; text-wrap:pretty;">Not sure which plan fits? Book a demo and we'll walk your account list through the product, then tell you which tier makes sense.</div>
+        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#F4F3F1; color:#0A0A0A; border-radius:9px; padding:12px 22px; font-size:14.5px; font-weight:600; white-space:nowrap;" style-hover="background:#FFFFFF; color:#0A0A0A">Book a demo</a>
       </div>
     </div>
   </div>
 
   <!-- FAQ -->
   <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div class="dc-section dc-pad-96 dc-grid-2e" style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;">
-      <div class="dc-h3" style="font-family:Poppins,sans-serif; font-size:32px; font-weight:600; letter-spacing:-.035em; line-height:1.18; text-wrap:balance;">Questions we get on the first call.</div>
+    <div class="r-2col" style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;">
+      <div style="font-family:Poppins,sans-serif; font-size:32px; font-weight:600; letter-spacing:-.035em; line-height:1.18; text-wrap:balance;">Questions we get on the first call.</div>
       <div onClick="{{ onFaqClick }}" style="display:flex; flex-direction:column;">
         <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
           <div data-faq="{{ f.i }}" style="{{ f.rowStyle }}">
@@ -359,61 +402,42 @@
 
   <!-- CLOSING -->
   <div style="border-top:1px solid #1C1C1C;">
-    <div class="dc-section dc-pad-120" style="max-width:1180px; margin:0 auto; padding:120px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:24px;">
-      <div class="dc-h1b" style="font-family:Poppins,sans-serif; font-size:46px; font-weight:600; letter-spacing:-.04em; line-height:1.1; max-width:18ch; text-wrap:balance;">Bring your account list. We'll show you the map.</div>
+    <div style="max-width:1180px; margin:0 auto; padding:120px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:24px;">
+      <div style="font-family:Poppins,sans-serif; font-size:46px; font-weight:600; letter-spacing:-.04em; line-height:1.1; max-width:18ch; text-wrap:balance;">Bring your account list. We'll show you the map.</div>
       <div style="font-size:17px; line-height:1.6; color:#8F8A82; max-width:48ch; text-wrap:pretty;">Forty-five minutes, your real data, no slides.</div>
       <div style="display:flex; gap:12px; padding-top:8px;">
-        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:14px 26px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a working session</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- OTHER WORK -->
-  <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
-    <div class="dc-section dc-pad-80" style="max-width:1180px; margin:0 auto; padding:80px 32px;">
-      <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
-        <div style="font-family:Poppins,sans-serif; font-size:26px; font-weight:600; letter-spacing:-.03em;">The rest of what Rudiment does</div>
-        <div style="font-size:15px; color:#6F6A64;">The map is one piece of a go-to-market engine.</div>
-      </div>
-      <div class="dc-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
-        <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-          <a href="https://getrudiment.com" target="_blank" rel="noopener" class="dc-card" style="border:1px solid #1F1F1F; border-radius:14px; background:#0F0F0F; padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none;" style-hover="border-color:#2E2E2E">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
-              <div style="font-family:Poppins,sans-serif; font-size:18px; font-weight:600; letter-spacing:-.02em; color:#F4F3F1;">{{ s.name }}</div>
-              <div style="color:#2FE3A8; font-size:15px;">→</div>
-            </div>
-            <div style="font-size:14.5px; line-height:1.6; color:#8F8A82; text-wrap:pretty;">{{ s.body }}</div>
-          </a>
-        </sc-for>
+        <a href="https://meetings-na2.hubspot.com/robert-clark?uuid=3f26582f-d099-44ba-9064-9df2f4d68b9d" target="_blank" rel="noopener" style="background:#2FE3A8; color:#06231A; border-radius:9px; padding:14px 26px; font-size:15px; font-weight:600;" style-hover="background:#7FF0C9; color:#06231A">Book a demo</a>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div style="border-top:1px solid #1C1C1C; background:#080808;">
-    <div class="dc-section dc-pad-36 dc-footer-row" style="max-width:1180px; margin:0 auto; padding:36px 32px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+  <div style="border-top:1px solid #1C1C1C; background:#0C0C0C;">
+    <div style="max-width:1180px; margin:0 auto; padding:36px 32px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
       <div style="display:flex; align-items:center;">
-        <img src="/assets/rudiment-logo.png" alt="Rudiment" style="height:19px; width:auto; display:block; opacity:.42;">
+        <div style="display:flex; align-items:center; gap:9px;">
+          <div style="display:flex; align-items:baseline; gap:1px; font-family:'JetBrains Mono',monospace; font-size:16px; line-height:1; letter-spacing:-.02em;"><span style="color:#2FE3A8; font-weight:400;">[</span><span style="color:#A8A29A; font-weight:500;">rudiment</span><span style="color:#2FE3A8; font-weight:400;">]</span></div>
+        </div>
       </div>
-      <div class="dc-footer-links" style="flex:1; display:flex; gap:22px; font-size:13.5px; color:#57534C; flex-wrap:wrap;">
+      <div style="flex:1; display:flex; gap:22px; font-size:13.5px; color:#57534C; flex-wrap:wrap;">
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">GTM Engineering</a>
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">RevOps</a>
         <a href="https://getrudiment.com" target="_blank" rel="noopener" style="color:#57534C;" style-hover="color:#A8A29A">Outbound</a>
       </div>
-      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#3D3A35; letter-spacing:.06em;">GO-TO-MARKET FOR SMALL FIELD TEAMS</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#6F6A64; letter-spacing:.06em;">GO-TO-MARKET FOR SMALL FIELD TEAMS</div>
     </div>
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2FE3A8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2FE3A8&quot;,&quot;#0FC0F0&quot;],&quot;section&quot;:&quot;Brand&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;brandColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2FE3A8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2FE3A8&quot;,&quot;#22C58F&quot;,&quot;#3DF0C0&quot;],&quot;section&quot;:&quot;Brand&quot;}}">
 const FAQS = [
-  { q: 'Is this just another SaaS subscription?', a: "No. You get a URL and your team logs in, yes \u2014 but you're not buying a seat in a product. We build the map around your accounts, your service areas and your definition of a good customer, and we keep building as the territory changes. Closer to hiring a firm than subscribing to a tool." },
-  { q: 'We only have a couple of salespeople. Is this overkill?', a: 'That is exactly who it is for. A three-rep team has the same routing and prioritization problem as a thirty-rep team and none of the back office to solve it. Smaller book, faster build, same retainer.' },
-  { q: 'What does the build-out fee cover?', a: 'Discovery, connecting whatever system your accounts live in, importing and cleaning the list, the service-area logic, the filters your reps actually use, and training. Quoted once, after we have looked at your data, and it does not move.' },
-  { q: 'Why price by team size instead of per seat?', a: 'Per-seat pricing punishes you for putting the map in front of more people, which is the whole point. Within a tier, add the office manager, the owner, the new hire \u2014 the number does not change. You only move up when the team genuinely grows past five or ten.' },
+  { q: 'How is this different from the mapping tool in our CRM?', a: 'CRM maps plot what you already have. This one also shows what you are missing \u2014 properties in your service area that are not on your list yet \u2014 and gives you the verified contact at each one. Filters, service areas and routes are built around how your team actually dispatches, not a generic template.' },
+  { q: 'We only have a couple of salespeople. Is this overkill?', a: 'That is exactly who it is for. A three-rep team has the same routing and prioritization problem as a thirty-rep team and none of the back office to solve it. Smaller book, faster onboarding, same price.' },
+  { q: 'What does onboarding look like?', a: 'We connect whatever system your accounts live in, import and clean the list, set up your service areas and filters, and train your team. Included in every plan, no setup fee. Most teams are live within a week.' },
+  { q: 'Why no per-seat pricing?', a: 'Charging per seat punishes you for putting the map in front of more people, which is the whole point. Plans are priced on enrichment credits and features instead, so you only move up when you actually use more.' },
   { q: 'What happens in the Slack channel?', a: 'A shared channel with the people who built your map. Filter requests, data questions, a rep who needs a route rebuilt before Tuesday morning. Same-day responses during business hours.' },
   { q: 'Our accounts live in QuickBooks and a spreadsheet.', a: 'Common, and fine. We have pulled account lists out of service software, accounting systems, CRMs and plain CSVs. If you can export it, we can map it.' },
-  { q: 'Do we own what you build?', a: 'The data is yours and exports whenever you want it. The platform stays ours, which is what lets us keep improving it for you without a change order.' }
+  { q: 'Is our data ours?', a: 'Yes. Everything exports whenever you want it, and the two-way sync means your CRM stays the system of record.' }
 ];
 
 const DOTS = [
@@ -438,21 +462,33 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const accent = this.props.accent ?? '#2FE3A8';
+    const accent = this.props.brandColor ?? '#2FE3A8';
     return {
       accent,
       dots: DOTS.map(([x, y, hot]) => ({
         x, y,
         r: hot ? 4.5 : 3,
-        fill: hot ? accent : '#3A3A3A',
+        fill: hot ? accent : '#3D3A35',
         o: hot ? 1 : 0.85
       })),
-      surfaces: [
-        { n: '01', title: 'Map', body: 'Every account you serve, plotted and filterable by status, service line or anything else you track. Cancellations, at-risk customers and open ground all readable in one look.', tags: ['Account sync', 'Filter groups', 'Route building'] },
-        { n: '02', title: 'Chat', body: 'Ask the map a question in plain language. Which canceled accounts sit near Tuesday\u2019s route, where revenue is slipping, who has not been visited since spring. Answers come back as lists your reps can drive.', tags: ['Claude / GPT', 'Map-aware', 'Export'] },
-        { n: '03', title: 'Prospect', body: 'Find properties that look like your best customers and are not on your list yet. Deduped against what you already serve, then dropped onto the map as leads.', tags: ['Lookalikes', 'Deduped', 'Push to map'] },
-        { n: '04', title: 'Enrich', body: 'Pick a company and get the profile plus the people. Verified emails, direct dials, the titles that actually sign. Credits are included in the retainer.', tags: ['5,000 credits/mo', 'Direct dials', 'Push to CRM'] }
-      ],
+      mapPins: (() => {
+        let s = 1337;
+        const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+        const colors = ['#2FE3A8', '#2FE3A8', '#5B8FD9', '#E5484D', '#8A857E'];
+        return Array.from({ length: 24 }, (_, i) => {
+          const c = colors[Math.floor(rnd() * colors.length)];
+          const sel = i === 9;
+          return { style: {
+            position: 'absolute',
+            left: (5 + rnd() * 34) + '%',
+            top: (8 + rnd() * 80) + '%',
+            width: sel ? '11px' : '7px', height: sel ? '11px' : '7px',
+            borderRadius: '50%', background: sel ? '#E5484D' : c,
+            border: sel ? '2px solid #F4F3F1' : '1px solid #0B0B0D',
+            boxShadow: sel ? '0 0 0 5px rgba(229,72,77,.22)' : 'none'
+          } };
+        });
+      })(),
       enrichPoints: [
         'Company profile, headcount, revenue estimate and turf or square footage',
         'Verified work emails and direct dials for the roles that sign',
@@ -463,60 +499,55 @@ class Component extends DCLogic {
         { name: 'Marcus Field', title: 'Property Manager', value: '(801) 555\u20130187', style: { color: '#A8A29A', fontSize: '12.5px', fontVariantNumeric: 'tabular-nums' } },
         { name: 'Priya Raman', title: 'VP Operations', value: 'Reveal \u00b7 2', style: { color: accent, fontSize: '12px', fontWeight: 600, border: '1px solid #1D4536', background: '#132A22', borderRadius: '7px', padding: '5px 10px', whiteSpace: 'nowrap' } }
       ],
-      steps: [
-        { when: 'WEEK 1', title: 'Working session', body: 'We go through your account list, your service areas and how your reps decide where to drive. No slides.' },
-        { when: 'WEEK 2', title: 'Data and wiring', body: 'Accounts pulled from wherever they live, cleaned, deduped, and mapped to the language your team uses.' },
-        { when: 'WEEKS 3\u20134', title: 'Build and review', body: 'Filters, service areas and routes built to your definitions. You review it with real accounts on the screen.' },
-        { when: 'WEEK 5+', title: 'Live and supported', body: 'Team trained, Slack channel open, monthly credits flowing. We keep adjusting as the book changes.' }
-      ],
-      buildIncludes: [
-        'Working session with the owner and everyone who sells',
-        'Account import from your CRM, service software or spreadsheet',
-        'Service-area logic and filter groups built to your definitions',
-        'Route planning configured around how you actually dispatch',
-        'Training and rollout for the people who use it'
-      ],
       tiers: [
         {
-          badge: 'Start here', size: '1\u20135 users', name: 'Standard', price: '$500', per: '/mo',
-          credits: '5,000 credits / mo',
-          note: 'One field team, one service area. The build we deliver most often.',
-          featured: true,
+          badge: '', size: 'Entry', name: 'Base', price: '$149', per: '/mo',
+          credits: '1,000 credits / mo',
+          note: 'The map, live and synced. For a team getting its first look at the whole book.',
+          featured: false,
           features: [
             { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: '1,000 enrichment credits every month', ok: true },
             { t: 'Dedicated Slack channel with the team that built it', ok: true },
-            { t: 'Same-day support during business hours', ok: true },
-            { t: '5,000 enrichment credits every month', ok: true },
-            { t: 'Ongoing changes \u2014 new filters, new areas, new people', ok: true },
             { t: 'API access and custom endpoints', ok: false }
           ]
         },
         {
-          badge: '', size: '5\u201310 users', name: 'Growth', price: '$1,000', per: '/mo',
-          credits: '20,000 credits / mo',
-          note: 'Multiple crews or regions, with territory splits between reps.',
-          featured: false,
+          badge: 'Most teams', size: 'Growing team', name: 'Standard', price: '$299', per: '/mo',
+          credits: '5,000 credits / mo',
+          note: 'Everything in Base, five times the credits, and the API open.',
+          featured: true,
           features: [
             { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: '5,000 enrichment credits every month', ok: true },
             { t: 'Dedicated Slack channel with the team that built it', ok: true },
-            { t: 'Same-day support during business hours', ok: true },
-            { t: '20,000 enrichment credits every month', ok: true },
-            { t: 'Per-rep territory splits and separate route books', ok: true },
-            { t: 'API access and custom endpoints', ok: true }
+            { t: 'API access and custom endpoints', ok: true },
           ]
         },
         {
-          badge: '', size: '10+ users', name: 'Multi-team', price: 'Get pricing', per: '',
-          credits: '40,000 credits / mo',
-          note: 'Several branches, custom integrations, or a rollout across markets.',
+          badge: '', size: 'Full', name: 'Growth', price: '$599', per: '/mo',
+          credits: '10,000 credits / mo',
+          note: 'The full product at volume. For teams working several regions at once.',
           featured: false,
           features: [
             { t: 'Two-way CRM sync \u2014 changes on the map write back in real time', ok: true },
+            { t: '10,000 enrichment credits every month', ok: true },
             { t: 'Dedicated Slack channel with the team that built it', ok: true },
+            { t: 'API access and custom endpoints', ok: true },
+            { t: 'Priority support with a named account lead', ok: true }
+          ]
+        },
+        {
+          badge: '', size: 'Billed annually', name: 'Custom', price: 'Get pricing', per: '',
+          credits: 'Credits to scope',
+          note: 'Larger teams, several branches, or integrations beyond your CRM.',
+          featured: false,
+          features: [
+            { t: 'Everything in Growth, sized to your organization', ok: true },
+            { t: 'Enrichment credit pool scoped to your volume', ok: true },
             { t: 'Priority support with a named account lead', ok: true },
-            { t: '40,000 enrichment credits every month', ok: true },
-            { t: 'Custom integrations beyond your CRM', ok: true },
-            { t: 'API access and custom endpoints', ok: true }
+            { t: 'API access and custom endpoints', ok: true },
+            { t: 'Custom integrations beyond your CRM', ok: true }
           ]
         }
       ].map(t => ({
@@ -524,16 +555,20 @@ class Component extends DCLogic {
         cardStyle: {
           border: '1px solid ' + (t.featured ? '#1D4536' : '#1F1F1F'),
           borderRadius: '14px',
-          background: t.featured ? 'linear-gradient(180deg,#0F1613,#0F0F0F 60%)' : '#0F0F0F',
-          padding: '32px', display: 'flex', flexDirection: 'column', gap: '4px', position: 'relative'
+          background: t.featured ? 'linear-gradient(180deg,#132A22,#0F0F0F 60%)' : '#0F0F0F',
+          padding: '26px 24px', position: 'relative',
+          // Subgrid: the 8 bands (eyebrow, name, price, chip, note, rule,
+          // features, CTA) are rows of the OUTER grid, so every card shares
+          // them and nothing staggers when copy lengths differ.
+          display: 'grid', gridTemplateRows: 'subgrid', gridRow: 'span 8', alignContent: 'start'
         },
         features: t.features.map(f => ({
           t: f.t,
           mark: f.ok ? '\u2713' : '\u2715',
-          markStyle: { color: f.ok ? (t.featured ? accent : '#4E5A55') : '#E5484D', fontSize: '13px', lineHeight: 1.6, flexShrink: 0 },
+          markStyle: { color: f.ok ? (t.featured ? accent : '#5A6660') : '#E5484D', fontSize: '13px', lineHeight: 1.6, flexShrink: 0 },
           textStyle: { fontSize: '14px', lineHeight: 1.55, color: f.ok ? '#A8A29A' : '#6F6A64' }
         })),
-        cta: t.price === 'Get pricing' ? 'Talk to us' : 'Book a working session',
+        cta: t.price === 'Get pricing' ? 'Talk to us' : 'Book a demo',
         ctaStyle: t.featured
           ? { marginTop: '24px', background: accent, color: '#06231A', borderRadius: '9px', padding: '11px 0', textAlign: 'center', fontSize: '14px', fontWeight: 600, cursor: 'pointer', textDecoration: 'none', display: 'block' }
           : { marginTop: '24px', border: '1px solid #2B2B2B', color: '#F4F3F1', borderRadius: '9px', padding: '11px 0', textAlign: 'center', fontSize: '14px', fontWeight: 500, cursor: 'pointer', textDecoration: 'none', display: 'block' },
@@ -542,7 +577,7 @@ class Component extends DCLogic {
           : { display: 'none' },
         priceStyle: {
           fontFamily: 'Poppins, sans-serif',
-          fontSize: t.price.length > 6 ? '26px' : '36px',
+          fontSize: t.price.length > 6 ? '22px' : '32px',
           fontWeight: 600, letterSpacing: '-.04em',
           color: t.featured ? accent : '#F4F3F1'
         },
@@ -553,24 +588,12 @@ class Component extends DCLogic {
         creditStyle: {
           display: 'inline-flex', alignItems: 'center', alignSelf: 'flex-start',
           border: '1px solid ' + (t.featured ? '#1D4536' : '#232323'),
-          background: t.featured ? '#132A22' : '#141414',
+          background: t.featured ? '#132A22' : '#1C1C1C',
           color: t.featured ? accent : '#A8A29A',
           borderRadius: '7px', padding: '5px 10px', marginTop: '10px',
-          fontFamily: "'JetBrains Mono', monospace", fontSize: '11px', letterSpacing: '.06em'
+          fontFamily: "'JetBrains Mono', monospace", fontSize: '11px', letterSpacing: '.06em', whiteSpace: 'nowrap'
         }
       })),
-      services: [
-        { name: 'GTM Engineering', body: 'Systems, data and automation that make a small team sell like a big one.' },
-        { name: 'RevOps', body: 'CRM cleanup, pipeline hygiene and the reporting your board keeps asking for.' },
-        { name: 'Outbound', body: 'Sequences, deliverability and infrastructure that actually reaches the inbox.' }
-      ],
-      retainerIncludes: [
-        'Dedicated Slack channel with the team that built it',
-        'Same-day support during business hours',
-        'A monthly enrichment credit pool, sized to your tier',
-        'Ongoing changes \u2014 new filters, new areas, new people',
-        'Platform updates and new surfaces as we ship them'
-      ],
       onFaqClick: this._onFaqClick,
       faqs: FAQS.map((f, i) => {
         const open = this.state.open === i;
