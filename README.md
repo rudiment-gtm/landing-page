@@ -1,10 +1,10 @@
-# Rudiment GTM Map — landing page
+# Rudiment — landing page
 
 Vite static site. Deploys to Vercel with the **Vite** framework preset.
 
     index.html            the page (Vite entry)
     public/support.js     runtime the page loads — copied to dist/ as-is
-    public/assets/        Rudiment logo + mark (favicon)
+    public/favicon.svg    favicon
     vite.config.js
     vercel.json           pins framework / install / build / output
 
